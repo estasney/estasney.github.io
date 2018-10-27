@@ -19,6 +19,16 @@
         "network": "GitHub",
         "username": "estasney",
         "url": "https://github.com/estasney"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "",
+        "url": "https://www.linkedin.com/in/eric-stasney-965962108"
+      },
+      {
+        "network": "Kaggle",
+        "username": "estasney",
+        "url": "https://www.kaggle.com/estasney"
       }
     ]
   },
@@ -29,12 +39,12 @@
       "description": "Talent Hub",
       "position": "Business Analyst / Developer",
       "url": "",
-      "startDate": "2016-10-01",
+      "startDate": "Aug 2016",
       "endDate": "",
-      "summary": "Talent Hub is a small team delivering critical talent pipelines in an ever-changing environment.",
+      "summary": "Talent Hub is a small team delivering critical talent pipelines in an ever-changing Talent Landscape.",
       "highlights": [
         "Developed Data Extraction Software and deployed to AWS, supporting 40 internal users. Dramatically increased team's efficiency and quality.",
-        "Reached 2nd round of Cisco's Innovate Everywhere Challenge for proposing and building a data-driven 'Sourcing Assistant'. Alpha build available at https://estasney.pythonanywhere.com",
+        "Reached 2nd round of Cisco's Innovate Everywhere Challenge for proposing and building a data-driven 'Sourcing Assistant'.",
         "Developed a graph-based program to assist with company name disambiguation. Available on GitHub and Pypi (company-graph).",
         "Research and deliver Talent Trends data from unstructured, textual data. Created NLP pipeline to cluster resumes via LDA."
       ]
@@ -45,8 +55,8 @@
       "description": "Military Police",
       "position": "E4 (Specialist)",
       "url": "",
-      "startDate": "2013-11-01",
-      "endDate": "2016-11-01",
+      "startDate": "Nov 2013",
+      "endDate": "Nov 2016",
       "summary": "Enlisted in National Guard to serve my community, part-time. Immediately activated to Federal Service after initial training and deployed."
     }
   ],
@@ -54,9 +64,9 @@
     {
       "institution": "The University of Tennessee",
       "area": "Biochemistry, Cellular and Molecular Biology",
-      "studyType": "Bachelor",
-      "startDate": "2006-08-01",
-      "endDate": "2011-05-01",
+      "studyType": "Bachelors",
+      "startDate": "2006",
+      "endDate": "2011",
       "gpa": "3.5"
     }
   ],
@@ -71,7 +81,7 @@
   "skills": [
     {
       "name": "Data Analysis",
-      "level": "Expert",
+      "level": "Advanced",
       "keywords": [
         "Python",
         "pandas",
@@ -129,7 +139,7 @@
         "Flask",
         "Word Embeddings"
       ],
-      "startDate": "2017-01-01",
+      "startDate": "Jan 2017",
       "endDate": "",
       "url": "https://estasney.pythonanywhere.com",
       "roles": [
