@@ -1,0 +1,238 @@
+{% set location = basics['location'] %}
+{% set profiles = basics['profiles'] %}
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Master Builder - Hacking Sourcing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="styles/favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <div id="resume">
+    <header id="header" class="clear">
+      <div>
+        <h1 class="name">{{basics['name']}}</h1>
+        <h2 class="label">{{basics['label']}}</h2>
+      </div>
+      <span class="location">
+          <span class="address"></span>
+          <span class="city">{{location['city']}}</span>
+          <span class="postalCode">{{location['postalCode']}}</span>
+          <span class="countryCode">{{location['countryCode']}}</span>
+      </span>
+        <div id="contact">
+            {% for profile in profiles %}
+        <div class="website">
+
+          <span class="fa fa-external-link">
+                    <a target="_blank" href="{{profile['url']}}">{{profile['network']}}</a>
+                </span>
+        </div>
+            {% endfor %}
+        </div>
+    </header>
+      <section class="section main-summary">
+        <section>
+            <div>
+                <p><strong>{{basics['summary']}}</strong>
+            </div>
+        </section>
+    </section>
+      <section class="section margin1">
+        <header>
+            <h2 class="section-title">Skills</h2>
+        </header>
+        <section id="skills">
+            {% for skill in skills %}
+            <div class="item">
+                <h3 class="name">
+                    {{skill['name']}}
+                </h3>
+                <div class="level {{skill['level'].lower()}}">
+                    <em>{{skill['level']}}</em>
+                    <div class="bar"></div>
+                </div>
+                <ul class="keywords">
+                    {% for kw in skill['keywords'] %}
+                    <li>{{kw}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+
+
+        </section>
+    </section>
+      <section class="section">
+          <header>
+              <h2 class="section-title">
+                  Work Experience
+                  <span class="item-count">({{work|length}})</span>
+              </h2>
+          </header>
+          <section id="work">
+              {% for job in work %}
+                <section class="work-item">
+                    <input id="work-item-{{loop.index - 1}}" type="checkbox" class="toggle-item" checked="checked">
+                    <label for="work-item-{{loop.index - 1}}"></label>
+                    <header>
+                        <div class="position">{{job['position']}}</div>
+                        <div class="company">{{job['name']}}</div>
+                        <div class="date">
+                            <span class="startDate">{{job['startDate']}}</span>
+                            {% if job['endDate'] == "" %}
+                                {% set endDate = " to Present" %}
+                            {% else %}
+                                {% set endDate = " to {}".format(job['endDate']) %}
+                            {% endif %}
+                            <span class="endDate">{{endDate}}</span>
+                        </div>
+                    </header>
+                    <div class="item" id="work-item">
+                    <div class="summary">
+                        {{job['summary']}}
+                    </div>
+                    <ul class="highlights">
+                        {% for highlight in job['highlights'] %}
+                        <li>
+                            <p>{{highlight}}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    </div>
+                </section>
+              {% endfor %}
+          </section>
+      </section>
+
+      <section class="section">
+        <header>
+            <h2 class="section-title">Education
+                <span class="item-count">({{educations|length}})</span>
+            </h2>
+        </header>
+        <section id="education">
+            {% for edu in educations %}
+                <section class="education-item">
+                <header>
+                <div class="header-left">
+                    <div class="studyType">
+                        {{edu['studyType']}} -
+                    </div>
+                    <div class="area">
+                        {{edu['area']}}
+                    </div>
+                    <div class="institution">
+                        {{edu['institution']}}
+                    </div>
+                </div>
+                <div class="date">
+                    <span class="startDate">{{edu['startDate']}}</span>
+                    <span class="endDate"> - {{edu['endDate']}}</span>
+                </div>
+                </header>
+                    <!-- hack to display gpa correctly -->
+                    <div class="item"></div>
+                    <div class="item">
+                        <div class="gpa">
+                        <strong> Grade:</strong> <span>{{edu['gpa']}}</span>
+                        </div>
+                    </div>
+                </section>
+            {% endfor %}
+        </section>
+    </section>
+      <section class="section">
+        <header>
+            <h2 class="section-title">Awards</h2>
+        </header>
+            <section id="awards">
+                {% for award in awards %}
+                <section class="award-item">
+                    <input id="award-item-{{loop.index - 1}}" type="checkbox" class="toggle-item" checked="checked">
+                    <label for="award-item-{{loop.index - 1}}"></label>
+                <header>
+                    <div class="header-left">
+                    <div class="title">
+                        {{award['title']}}
+                    </div>
+                    <div class="awarder">
+                        {{award['awarder']}}
+                    </div>
+                    </div>
+                    <div class="date">
+                        {{award['date']}}
+                    </div>
+                </header>
+                <div class="item">
+                <div class="summary">
+                    <p></p>
+                <p>{{award['summary']}}</p>
+                    <p></p>
+                </div>
+                </div>
+                </section>
+                {% endfor %}
+            </section>
+      </section>
+
+      <section class="section margin1">
+          <header>
+              <h2 class="section-title">Projects</h2>
+          </header>
+          <section id="projects">
+              {% for project in projects %}
+              <div class="item">
+                  <h3 class="name">
+                      {% if project.get('url', "") != "" %}
+                      <a href="{{project['url']}}">{{project['name']}}</a>
+                      {% else %}
+                      {{project['name']}}
+                      {% endif %}
+
+                  </h3>
+                  <div class="summary">
+                      {{project['summary']}}
+                  </div>
+                  <ul class="highlights">
+                        {% for highlight in project['highlights'] %}
+                        <li>
+                            <p>{{highlight}}</p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+              </div>
+              {% endfor %}
+          </section>
+      </section>
+
+
+      <section class="section margin1">
+        <header>
+            <h2 class="section-title">Interests</h2>
+        </header>
+        <section id="interests">
+            {% for interest in interests %}
+        <div class="item">
+        <h3 class="name">
+            {{interest['name']}}
+        </h3>
+        <ul class="keywords">
+            {% for kw in interest['keywords'] %}
+                <li>{{kw}}</li>
+            {% endfor %}
+        </ul>
+        </div>
+            {% endfor %}
+        </section>
+        </section>
+  </div>
+
+</html>
