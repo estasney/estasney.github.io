@@ -1,0 +1,148 @@
+{
+  "basics": {
+    "name": "Eric Stasney",
+    "label": "Business Analyst / Developer",
+    "image": "",
+    "email": "",
+    "phone": "",
+    "url": "https://www.linkedin.com/in/eric-stasney-965962108",
+    "summary": "Analytical professional with 2+ years of experience with accomplishing business objectives through strategic data analysis and software development.",
+    "location": {
+      "address": "",
+      "postalCode": "NC 27529",
+      "city": "Garner",
+      "countryCode": "US",
+      "region": "North Carolina"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "estasney",
+        "url": "https://github.com/estasney"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Cisco",
+      "location": "Raleigh, NC (Remote)",
+      "description": "Talent Hub",
+      "position": "Business Analyst / Developer",
+      "url": "",
+      "startDate": "2016-10-01",
+      "endDate": "",
+      "summary": "Talent Hub is a small team delivering critical talent pipelines in an ever-changing environment.",
+      "highlights": [
+        "Developed Data Extraction Software and deployed to AWS, supporting 40 internal users. Dramatically increased team's efficiency and quality.",
+        "Reached 2nd round of Cisco's Innovate Everywhere Challenge for proposing and building a data-driven 'Sourcing Assistant'. Alpha build available at https://estasney.pythonanywhere.com",
+        "Developed a graph-based program to assist with company name disambiguation. Available on GitHub and Pypi (company-graph).",
+        "Research and deliver Talent Trends data from unstructured, textual data. Created NLP pipeline to cluster resumes via LDA."
+      ]
+    },
+    {
+      "name": "US Army / COARNG",
+      "location": "Denver, CO",
+      "description": "Military Police",
+      "position": "E4 (Specialist)",
+      "url": "",
+      "startDate": "2013-11-01",
+      "endDate": "2016-11-01",
+      "summary": "Enlisted in National Guard to serve my community, part-time. Immediately activated to Federal Service after initial training and deployed."
+    }
+  ],
+  "education": [
+    {
+      "institution": "The University of Tennessee",
+      "area": "Biochemistry, Cellular and Molecular Biology",
+      "studyType": "Bachelor",
+      "startDate": "2006-08-01",
+      "endDate": "2011-05-01",
+      "gpa": "3.5"
+    }
+  ],
+  "awards": [
+    {
+      "title": "P2P Recognition",
+      "date": "Multiple dates",
+      "awarder": "Multiple peers and managers",
+      "summary": "Consistently exceeding expectations"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Data Analysis",
+      "level": "Expert",
+      "keywords": [
+        "Python",
+        "pandas",
+        "NumPy"
+      ]
+    },
+    {
+      "name": "Web Scraping",
+      "level": "Master",
+      "keywords": [
+        "Selenium",
+        "Regex",
+        "pdfminer",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Fullstack Web Development",
+      "level": "Intermediate",
+      "keywords": [
+        "Flask",
+        "JavaScript",
+        "MySQL",
+        "Chrome Extension"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "IoT",
+      "keywords": [
+        "Raspberry Pi",
+        "Arduino"
+      ]
+    },
+    {
+      "name": "Woodworking",
+      "keywords": [
+        "3d Models",
+        "Project planning"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Percy",
+      "description": "Data driven sourcing assistant",
+      "highlights": [
+        "2nd round selection in Cisco's Innovate Everywhere Challenge",
+        "Showcases various techniques to optimized sourcing workflow",
+        "Integrated with Cisco's Webex Teams platform as a chatbot"
+      ],
+      "keywords": [
+        "NLP",
+        "Flask",
+        "Word Embeddings"
+      ],
+      "startDate": "2017-01-01",
+      "endDate": "",
+      "url": "https://estasney.pythonanywhere.com",
+      "roles": [
+        "Team lead",
+        "Designer"
+      ],
+      "entity": "Cisco Talent Hub",
+      "type": "application"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}
