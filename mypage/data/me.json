@@ -47,7 +47,7 @@
       "highlights": [
         "Developed an internal web scraper. Users perform extractions via the Chrome Extension and manage them via a web application written in Flask. This dramatically improved the team's efficiency by replacing manual data entry with a streamlined extraction and upload.",
         "Showcased data-driven approaches to 'sourcing' via another Flask web app. Users can search for related words and skills via word-embeddings, explore document concepts with D3.js graphs, and uncover optimal search strings based on TF-IDF",
-        "Compiled, cleaned and made accessible a Company Name Disambiguation Python package. I found that 'in the wild' companies can have hundreds of name variants. This makes answering questions like, 'How many of X are from Y company?' extremely tedious. I used a directed graph data structure to represent a hierarchy of names where multiple uncommon names map to one common name.",
+        "Compiled, cleaned and made accessible a Company Name Disambiguation Python package. I found that 'in the wild' companies can have hundreds of name variants. This makes answering questions like, 'How many of X are from Y company?' extremely tedious. I used a directed graph data structure to represent a hierarchy of names where multiple uncommon names map to one common name."
       ]
     },
     {
