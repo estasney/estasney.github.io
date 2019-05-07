@@ -12,10 +12,10 @@ def get_data(fp):
         return json.load(json_file)
 
 
-template = get_template('/home/eric/PycharmProjects/MyPage/mypage/templates/template.html')
-data = get_data('/home/eric/PycharmProjects/MyPage/mypage/data/me.json')
+template = get_template(r"C:\Users\estasney\PycharmProjects\pages\mypage\templates\template.html")
+data = get_data(r"C:\Users\estasney\PycharmProjects\pages\mypage\data\me.json")
 output = template.render(basics=data['basics'], skills=data['skills'], work=data['work'],
                          educations=data['education'], awards=data['awards'], projects=data['projects'],
                          interests=data['interests'])
-with open(r"/home/eric/PycharmProjects/MyPage/index.html", "w") as html_file:
+with open(r"C:\Users\estasney\PycharmProjects\pages\index.html", "w+") as html_file:
     html_file.write(output)

@@ -81,22 +81,32 @@
   ],
   "skills": [
     {
-      "name": "Data Analysis",
+      "name": "Python",
       "level": "Advanced",
       "keywords": [
-        "Python",
-        "pandas",
-        "NumPy"
+        "Pandas",
+        "NumPy",
+        "Requests",
+        "Kivy",
+        "Jupyter",
+        "Gensim",
+        "Sklearn",
+        "NetworkX",
+        "SQLAlchemy",
+        "OOP",
+        "Functional Programming"
       ]
     },
     {
-      "name": "Web Scraping",
+      "name": "ETL",
       "level": "Master",
       "keywords": [
         "Selenium",
-        "Regex",
+        "Requests",
         "pdfminer",
-        "SQL"
+        "MySQL",
+        "Regex",
+        "Elasticsearch"
       ]
     },
     {
@@ -104,6 +114,7 @@
       "level": "Intermediate",
       "keywords": [
         "Flask",
+        "SQLAlchemy",
         "JavaScript",
         "MySQL",
         "Chrome Extension"
