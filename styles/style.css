@@ -749,3 +749,7 @@ ul.courses li:hover {
     opacity: 1 !important;
   }
 }
+
+.keep-new-lines {
+white-space: pre-line;
+    }

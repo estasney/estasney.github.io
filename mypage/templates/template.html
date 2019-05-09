@@ -40,7 +40,7 @@
       <section class="section main-summary">
         <section>
             <div>
-                <p><strong>{{basics['summary']}}</strong>
+                <p class="keep-new-lines"><strong>{{basics['summary']}}</strong>
             </div>
         </section>
     </section>
@@ -67,6 +67,14 @@
             {% endfor %}
 
 
+        </section>
+        <section id="skills_ul">
+            <ul class="keywords">
+            {% for skill in skills_ul %}
+                <li>{{skill}}</li>
+                {% endfor %}
+
+            </ul>
         </section>
     </section>
       <section class="section">

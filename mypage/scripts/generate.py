@@ -1,6 +1,7 @@
 from jinja2 import Template
 import json
 
+flatten = lambda x: [item for sublist in x for item in sublist]
 
 def get_template(fp):
     with open(fp, "r") as html_file:
@@ -12,9 +13,21 @@ def get_data(fp):
         return json.load(json_file)
 
 
+def remove_duplicate_skills(skills, skills_ul):
+    # prevent skills that appear as keywords in skills from appearing in the unordered list below
+    seen = set(flatten([skill_group['keywords'] for skill_group in skills]))
+
+    skills_ul = [skill for skill in skills_ul if skill not in seen]
+    return skills_ul
+
+
+
+
 template = get_template(r"C:\Users\estasney\PycharmProjects\pages\mypage\templates\template.html")
 data = get_data(r"C:\Users\estasney\PycharmProjects\pages\mypage\data\me.json")
-output = template.render(basics=data['basics'], skills=data['skills'], work=data['work'],
+skills, skills_ul = data['skills'], data['skills_ul']
+skills_ul = remove_duplicate_skills(skills, skills_ul)
+output = template.render(basics=data['basics'], skills=skills, skills_ul=skills_ul, work=data['work'],
                          educations=data['education'], awards=data['awards'], projects=data['projects'],
                          interests=data['interests'])
 with open(r"C:\Users\estasney\PycharmProjects\pages\index.html", "w+") as html_file:
