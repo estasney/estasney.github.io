@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	<title>{{basics['name'}}</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles/caffeine-style.css" type="text/css">
+	</head>
+	<body>
+		<main id="resume" class="page">
+			<header class="resume-header clearfix">
+			    <div class="profile-header pull-left">
+			        <h1>{{basics['name']}}</h1>
+			        <h2>{{basics['label}}</h2>
+			    </div>
+				{% if 'image' in basics and basics['image'] != '' %}
+			    <div class="profile-pic pull-right">
+			        <img src="{{basics['image'}}" alt="profile-pic">
+			    </div>
+				{% endfor %}
+			</header>
+			<div class="resume-content">
+				<aside class="left-column">
+					<div class="container about-container">
+					    <div class="title">
+					        <h3>About</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <div class="info-tag-container">
+					            <i class="fa fa-map-marker"></i>
+
+								<h6 class="info-text">{{basics['location']}}</h6>
+					        </div>
+					        <div class="info-tag-container">
+					            <i class="fa fa-envelope-o"></i>
+
+					                <h6 class="info-text">{{basics['email']}}</h6>
+					        </div>
+					        <div class="info-tag-container">
+					            <i class="fa fa-mobile"></i>
+
+					                <h6 class="info-text">(912) 555-4321</h6>
+					        </div>
+					        <div class="info-tag-container">
+					            <i class="fa fa-desktop"></i>
+
+					                <h6 class="info-text">
+					                    <a href="http://piedpiper.com" target="_blank">
+					                        piedpiper.com <i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </div>
+					                         <div class="info-tag-container">
+					                             <i class="fa fa-twitter"></i>
+
+					                                 <h6 class="info-text">
+					                                     <a href="https://twitter.com/siliconHBO" target="_blank">
+					                                         siliconHBO <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+					                         </div>                         <div class="info-tag-container">
+					                             <i class="fa fa-facebook"></i>
+
+					                                 <h6 class="info-text">
+					                                     <a href="https://www.facebook.com/SiliconHBO" target="_blank">
+					                                         SiliconHBO <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+					                         </div>                         <div class="info-tag-container">
+					                             <i class="fa fa-instagram"></i>
+
+					                                 <h6 class="info-text">
+					                                     <a href="https://www.instagram.com/siliconhbo/" target="_blank">
+					                                         siliconhbo <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+					                         </div></section>
+					    <div class="skills-container">
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Web Development</h3>
+					                        <div class="keyline"></div>
+					                    </div>                    <h4 class="bold">Master</h4>
+					                    <ul class="minimal">
+					                            <li><h6>HTML</h6></li>
+					                            <li><h6>CSS</h6></li>
+					                            <li><h6>Javascript</h6></li>
+					                    </ul>
+					            </section>
+					            <section class="container">
+					                    <div class="title">
+					                        <h3>Compression</h3>
+					                        <div class="keyline"></div>
+					                    </div>                    <h4 class="bold">Master</h4>
+					                    <ul class="minimal">
+					                            <li><h6>Mpeg</h6></li>
+					                            <li><h6>MP4</h6></li>
+					                            <li><h6>GIF</h6></li>
+					                    </ul>
+					            </section>
+					    </div>
+					    <div class="container languages-container">
+					        <div class="title">
+					            <h3>Languages</h3>
+					            <div class="keyline"></div>
+					        </div>
+					        <ul class="minimal">
+					                <li>
+					                    <h6>English <em>(Native speaker)</em></h6>
+					                </li>
+					        </ul>
+					    </div>
+					    <div class="container interests-container">
+					        <div class="title">
+					            <h3>Interests</h3>
+					            <div class="keyline"></div>
+					        </div>
+					            <section class="item">
+					                    <h4 class="bold">Wildlife</h4>
+					                    <ul class="minimal">
+					                            <li>Ferrets</li>
+					                            <li>Unicorns</li>
+					                    </ul>
+					            </section>
+					    </div>
+				</aside>
+				<div class="right-column">
+					        <div class="container summary-container">
+					            <div class="title">
+					                <h3>Summary</h3>
+					                <div class="keyline"></div>
+					            </div>            <p class="summary">
+					                Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!
+					            </p>
+					        </div>
+					<div class="container work-container">
+					    <div class="title">
+					        <h3>Experience</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        <a href="http://piedpiper.com" target="_blank">
+					                            Pied Piper <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">04/2014</span>
+					                        <span class="endDate"> - Present</span>
+					                </h5>
+					            </div>
+					            <h4>CEO/President</h4>
+
+					            <p class="summary">Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p>
+
+					            <ul>
+					                <li>Build an algorithm for artist to detect if their music was violating copy right infringement laws</li>
+					                <li>Successfully won Techcrunch Disrupt</li>
+					                <li>Optimized an algorithm that holds the current world record for Weisman Scores</li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        <a href="http://www.hooli.xyz/" target="_blank">
+					                            Hooli <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">01/2013</span>
+					                        <span class="endDate"> - 04/2014</span>
+					                </h5>
+					            </div>
+					            <h4>Software Engineer</h4>
+
+					            <p class="summary">Worked on optimizing the backend algorithms for Hooli</p>
+
+					        </section>
+					</div>
+					<div class="container volunteer-container">
+					    <div class="title">
+					        <h3>Volunteer</h3>
+					        <div class="keyline"></div>
+					    </div>
+					    <section class="item">
+					        <div class="section-header clearfix">
+					            <h3 class="bold pull-left">
+					                    <a href="http://coderdojo.com/" target="_blank">
+					                        CoderDojo <i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					            </h3>
+					            <h5 class="italic pull-right">
+					                    <span class="startDate">01/2012</span>
+					                    <span class="endDate"> - 01/2013</span>
+					            </h5>
+					        </div>        <h5>Teacher</h5>
+
+					        <p class="summary">Global movement of free coding clubs for young people.</p>
+
+					        <ul>
+					            <li>Awarded &#x27;Teacher of the Month&#x27;</li>
+					        </ul>
+					    </section>
+					</div>
+					<div class="container education-container">
+					    <div class="title">
+					        <h3>Education</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Stanford
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">06/2011</span>
+					                        <span class="endDate"> - 01/2014</span>
+					                </h5>
+					            </div>
+					            <h4>B.S Computer Science</h4>
+
+					            <h5>GPA 4.0</h5>
+
+					            <ul class="two-column">
+					                <li>DB1101 - Basic SQL</li>
+					                <li>CS2011 - Java Introduction</li>
+					            </ul>
+					        </section>
+					</div>
+					<div class="container awards-container">
+					    <div class="title">
+					        <h3>Awards</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="bold pull-left">
+					                        Digital Compression Pioneer Award
+					                </h3>
+					                <h5 class="italic pull-right">
+					                </h5>
+					            </div>
+					            <h5 class="awarder">Techcrunch</h5>
+
+					            <p class="summary">There is no spoon.</p>
+					        </section>
+					</div>
+					<div class="container publications-container">
+					    <div class="title">
+					        <h3>Publications</h3>
+					        <div class="keyline"></div>
+					    </div>
+					    <section class="item">
+					        <div class="section-header clearfix">
+					            <h3 class="bold pull-left">
+					                    <a href="http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)" target="_blank">
+					                        Video compression for 3d media <i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					            </h3>
+					            <h5 class="italic pull-right">
+					                    10/2014
+					                    </h5>
+					        </div>
+					        <h5 class="awarder">Hooli</h5>
+
+					        <p class="summary">Innovative middle-out compression algorithm that changes the way we store data.</p>
+
+					    </section>
+					</div>
+					<div class="container references-container">
+					    <div class="title">
+					        <h3>References</h3>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item clearfix">
+					            <i class="fa fa-quote-left pull-left" aria-hidden="true"></i>
+					            <blockquote>
+					                It is my pleasure to recommend Richard. That is all.
+					            </blockquote>
+
+					            <h5 class="pull-right"> — Erlich Bachman</h5>
+					        </section>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
