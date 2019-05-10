@@ -48,7 +48,9 @@
         "Compiled a Company Name Disambiguation Python package. I found that 'in the wild' companies can have hundreds of name variants. This makes answering questions like, 'How many of X are from Y company?' extremely tedious. I used a directed graph data structure to represent a hierarchy of names where multiple uncommon names map to one common name.",
         "Audited Cisco's external job postings for formatting issues. Determined that 30% of job postings had major formatting issues such as literal newlines, visible HTML tags and visibly different font styles between paragraphs. Uncovered root cause to be an Excel spreadsheet that was being used as a templating engine for copy/pasting job descriptions.",
         "Generated an LDA Topic Model from current and historical Cisco job descriptions. Applied model to extract skill hierarchies from job descriptions and advised on their demand.",
-        "Showcased data-driven approaches to 'sourcing' via another Flask web app. Users can search for related words and skills via word-embeddings, explore document concepts with D3.js graphs, and uncover optimal search strings based on TF-IDF"
+        "Showcased data-driven approaches to 'sourcing' via another Flask web app. Users can search for related words and skills via word-embeddings, explore document concepts with D3.js graphs, and uncover optimal search strings based on TF-IDF",
+        "Used PdfMiner, Regex and pattern recognition to parse contact information from PDFs.",
+        "Evangelized archiving rather than deleting 100,000+ applications that were slated for deletion during an ATS migration. Funding for this time sensitive issue was not available. Wrote a Selenium test case that executed within a Firefox extension and distributed to internal team. Scripted the consolidation of thousands of spreadsheets into a master file."
       ]
     },
     {
@@ -60,6 +62,24 @@
       "startDate": "Nov 2013",
       "endDate": "Nov 2016",
       "summary": "Enlisted in CO Army National Guard with the intent to serve my community, part-time. However, after completing OSUT, my unit was activated to Federal Service (Active Duty) and I completed an 18-month deployment."
+    },
+    {
+      "name": "Seven Step RPO",
+      "location": "Denver, CO",
+      "description": "Talent Acquisition - Suntrust Bank",
+      "position": "Recruiter",
+      "startDate": "July 2013",
+      "endDate": "Sept 2014",
+      "summary": " Qualify candidates by conducting phone interviews to ensure technical and cultural match to client needs"
+    },
+    {
+      "name": "Edwards Student Housing & American Campus Communities",
+      "location": "Eastern U.S.",
+      "description": "Student Housing",
+      "position": "Assistant General Manager",
+      "startDate": "May 2011",
+      "endDate": "May 2013",
+      "summary": "Travelled between company properties to supervise and audit property operations"
     }
   ],
   "education": [
@@ -74,10 +94,13 @@
   ],
   "awards": [
     {
-      "title": "P2P Recognition",
+      "title": "Peer To Peer Recognition",
       "date": "Multiple dates",
       "awarder": "Multiple peers and managers",
-      "summary": "Consistently exceeding expectations"
+      "summary": "Recognition for contributions",
+      "highlights": [
+        "For developing 3 hours of training material to guide "
+      ]
     }
   ],
   "skills": [
@@ -87,11 +110,9 @@
       "keywords": [
         "Pandas",
         "NumPy",
-        "Requests",
-        "Kivy",
         "Jupyter",
         "Gensim",
-        "Sklearn",
+        "Scikit-Learn",
         "NetworkX",
         "OOP",
         "Functional Programming"
@@ -116,6 +137,8 @@
         "Flask",
         "SQLAlchemy",
         "JavaScript",
+        "jQuery",
+        "Bootstrap",
         "MySQL",
         "Chrome Extension"
       ]
@@ -127,7 +150,11 @@
     "SQL",
     "MySQL",
     "Kivy",
-    "Jupyter"
+    "Jupyter",
+    "Data Analysis",
+    "Tableau",
+    "Programming",
+    "PdfMiner"
   ],
   "interests": [
     {
@@ -178,7 +205,9 @@
         "Scraper exists of two main components : a Chrome Extension and Web Application",
         "Tracks extractions and prevents usage over a limit set by an administrator",
         "Manages extraction target lists to fetch only unseen data",
-        "Parses raw strings into structured data. Transforms data into spreadsheet form compatible with internal ATS."
+        "Parses raw strings into structured data. Transforms data into spreadsheet form compatible with internal ATS.",
+        "Builds word clouds based on word frequency from extractions",
+        "Integrates with contact enrichment providers"
       ]
     }
   ]
