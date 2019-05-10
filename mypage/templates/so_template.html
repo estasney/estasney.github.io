@@ -13,22 +13,6 @@
   gtag('config', 'UA-132355416-3');
 
     </script>
-    <script>
-        /**
-        * Function that registers a click on an outbound link in Analytics.
-        * This function takes a valid URL string as an argument, and uses that URL string
-        * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-        * using 'navigator.sendBeacon' in browser that support it.
-        */
-        var getOutboundLink = function(url) {
-          gtag('event', 'click', {
-            'event_category': 'outbound',
-            'event_label': url,
-            'transport_type': 'beacon',
-            'event_callback': function(){document.location = url;}
-          });
-        }
-        </script>
     <meta charset="utf-8">
     <title>{{basics['name']}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
