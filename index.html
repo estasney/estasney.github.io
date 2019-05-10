@@ -3,33 +3,14 @@
 <!DOCTYPE html>
 <html>
 
-<head><!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132355416-3"></script>
+<head>
     <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-132355416-3');
-
+    gtag('config', 'UA-132355416-3');
     </script>
-    <script>
-    /**
-    * Function that registers a click on an outbound link in Analytics.
-    * This function takes a valid URL string as an argument, and uses that URL string
-    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-    * using 'navigator.sendBeacon' in browser that support it.
-    */
-    var getOutboundLink = function(url) {
-      gtag('event', 'click', {
-        'event_category': 'outbound',
-        'event_label': url,
-        'transport_type': 'beacon',
-        'event_callback': function(){document.location = url;}
-      });
-    }
-    </script>
-
     <meta charset="utf-8">
     <title>Eric Stasney</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -45,7 +26,6 @@
       clear: both;
       display: table;
       }
-
     </style>
 </head>
 <div id="resume">
@@ -65,21 +45,21 @@
             <div class="website">
 
           <span class="fa fa-external-link">
-                    <a target="_blank" href="https://github.com/estasney" onclick="getOutboundLink('https://github.com/estasney'); return false;>GitHub</a>
+                    <a target="_blank" href="https://github.com/estasney"GitHub</a>
                 </span>
             </div>
             
             <div class="website">
 
           <span class="fa fa-external-link">
-                    <a target="_blank" href="https://www.linkedin.com/in/eric-stasney-965962108" onclick="getOutboundLink('https://www.linkedin.com/in/eric-stasney-965962108'); return false;>LinkedIn</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/eric-stasney-965962108"LinkedIn</a>
                 </span>
             </div>
             
             <div class="website">
 
           <span class="fa fa-external-link">
-                    <a target="_blank" href="https://www.kaggle.com/estasney" onclick="getOutboundLink('https://www.kaggle.com/estasney'); return false;>Kaggle</a>
+                    <a target="_blank" href="https://www.kaggle.com/estasney"Kaggle</a>
                 </span>
             </div>
             
