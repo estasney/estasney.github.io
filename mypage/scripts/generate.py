@@ -23,7 +23,7 @@ def remove_duplicate_skills(skills, skills_ul):
 
 
 
-template = get_template(r"C:\Users\estasney\PycharmProjects\pages\mypage\templates\template.html")
+template = get_template(r"C:\Users\estasney\PycharmProjects\pages\mypage\templates\so_template.html")
 data = get_data(r"C:\Users\estasney\PycharmProjects\pages\mypage\data\me.json")
 skills, skills_ul = data['skills'], data['skills_ul']
 skills_ul = remove_duplicate_skills(skills, skills_ul)
