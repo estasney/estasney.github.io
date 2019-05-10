@@ -706,27 +706,12 @@ ul.courses li:hover {
   }
   ul.keywords li,
   ul.courses li {
-    margin: 0;
-    padding: 0;
-    font-size: .8rem;
+    margin: 2px 2px 2px 0;
+    padding: 4px 5px 5px;
+    font-size: .9rem;
     text-transform: lowercase;
   }
-  ul.keywords li::after,
-  ul.courses li::after {
-    padding: 0 0 0 .1rem;
-    content: " |";
-  }
-  ul.keywords::before,
-  ul.courses::before {
-    font-size: .8rem;
-    font-weight: 600;
-  }
-  ul.keywords::before {
-    content: "Skills acquired: ";
-  }
-  #skills .keywords::before {
-    content: '';
-  }
+
   .section p {
     margin: 0;
     padding: 0;
@@ -742,9 +727,7 @@ ul.courses li:hover {
     font-style: normal;
     padding: .1em 0;
   }
-  .level .bar {
-    display: none;
-  }
+
   #profiles .item {
     padding: 0;
   }
