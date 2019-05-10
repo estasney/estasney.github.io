@@ -14,6 +14,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="styles/favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+      }
+    </style>
 </head>
 <div id="resume">
     <header id="header" class="clear">
@@ -94,7 +101,7 @@
                 <header>
                     <div class="position">{{job['position']}}</div>
                     <div class="company">{{job['name']}}</div>
-                    <div class="date">
+                    <div class="date clearfix">
                         <span class="startDate">{{job['startDate']}}</span>
                         {% if job['endDate'] == "" %}
                         {% set endDate = " to Present" %}
