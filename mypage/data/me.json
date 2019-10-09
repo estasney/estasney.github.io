@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Eric Stasney",
-    "label": "HR Analyst / Developer",
+    "label": "Analyst and Developer",
     "image": "",
     "email": "",
     "phone": "",
     "url": "https://www.linkedin.com/in/eric-stasney-965962108",
-    "summary": "Experienced data analyst leveraging a diverse background, self-taught programming and relentless drive. I enjoy a dynamic environment with new problems. I split problems into their sub-components, apply what I know and seek out what I do not. \n\nI love working with Python! My core skill set is ETL. Very comfortable with Selenium, Requests, Pandas, and Jupyter Notebooks, to name a few.\n\nI have also enjoyed creating data-driven web applications, Chrome Extensions, and \"Kaggling\"",
+    "summary": "Part developer, part data scientist and boundless curiosity. I enjoy a dynamic environment with new problems. I split problems into their sub-components, apply what I know and seek out what I do not. \n\nI love working with Python! My core skill set is ETL. Very comfortable with Selenium, Requests, Pandas, and Jupyter Notebooks, to name a few.\n\nI have also enjoyed creating data-driven web applications, Chrome Extensions, and \"Kaggling\"",
     "location": {
       "address": "",
       "postalCode": "NC 27529",
@@ -37,7 +37,7 @@
       "name": "Cisco",
       "location": "Raleigh, NC (Remote)",
       "description": "Talent Hub",
-      "position": "HR Analyst / Developer",
+      "position": "HR Analyst and Developer",
       "url": "",
       "startDate": "Aug 2016",
       "endDate": "",
@@ -106,12 +106,11 @@
   "skills": [
     {
       "name": "Python",
-      "level": "Advanced",
+      "level": "Master",
       "keywords": [
         "Pandas",
         "NumPy",
-        "Jupyter",
-        "Gensim",
+        "Scipy",
         "Scikit-Learn",
         "NetworkX",
         "OOP",
@@ -132,14 +131,14 @@
     },
     {
       "name": "Web Development",
-      "level": "Intermediate",
+      "level": "Advanced",
       "keywords": [
         "Flask",
         "SQLAlchemy",
-        "JavaScript",
-        "jQuery",
+        "React.js",
         "Bootstrap",
-        "MySQL",
+        "Webpack",
+        "API Developments",
         "Chrome Extension"
       ]
     }
@@ -147,7 +146,8 @@
   "skills_ul" : [
     "PyInstaller",
     "Elasticsearch",
-    "SQL",
+    "API Development",
+    "Docker",
     "MySQL",
     "Kivy",
     "Jupyter",
