@@ -23,12 +23,12 @@ def remove_duplicate_skills(skills, skills_ul):
 
 
 
-template = get_template(r"C:\Users\estasney\PycharmProjects\pages\mypage\templates\so_template.html")
-data = get_data(r"C:\Users\estasney\PycharmProjects\pages\mypage\data\me.json")
+template = get_template("/home/eric/PycharmProjects/MyPage/mypage/templates/so_template.html")
+data = get_data("/home/eric/PycharmProjects/MyPage/mypage/data/me.json")
 skills, skills_ul = data['skills'], data['skills_ul']
 skills_ul = remove_duplicate_skills(skills, skills_ul)
 output = template.render(basics=data['basics'], skills=skills, skills_ul=skills_ul, work=data['work'],
                          educations=data['education'], awards=data['awards'], projects=data['projects'],
                          interests=data['interests'])
-with open(r"C:\Users\estasney\PycharmProjects\pages\index.html", "w+") as html_file:
+with open("/home/eric/PycharmProjects/MyPage/index.html", "w+") as html_file:
     html_file.write(output)
