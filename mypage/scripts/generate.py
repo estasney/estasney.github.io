@@ -21,8 +21,6 @@ def remove_duplicate_skills(skills, skills_ul):
     return skills_ul
 
 
-
-
 template = get_template("/home/eric/PycharmProjects/MyPage/mypage/templates/so_template.html")
 data = get_data("/home/eric/PycharmProjects/MyPage/mypage/data/me.json")
 skills, skills_ul = data['skills'], data['skills_ul']

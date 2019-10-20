@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Eric Stasney",
-    "label": "Analyst and Developer",
+    "label": "Developer and Analyst",
     "image": "",
     "email": "",
     "phone": "",
     "url": "https://www.linkedin.com/in/eric-stasney-965962108",
-    "summary": "Part developer, part data scientist and boundless curiosity. I enjoy a dynamic environment with new problems. I split problems into their sub-components, apply what I know and seek out what I do not. \n\nI love working with Python! My core skill set is ETL. Very comfortable with Selenium, Requests, Pandas, and Jupyter Notebooks, to name a few.\n\nI have also enjoyed creating data-driven web applications, Chrome Extensions, and \"Kaggling\"",
+    "summary": "I enjoy working the 'full-stack' of a data problem. ETL textual, categorical and time-series data. Leverage statistics and machine learning to solve problems. Deliver consumable solutions to stakeholders with dashboards, reports and most recently, web applications",
     "location": {
       "address": "",
       "postalCode": "NC 27529",
@@ -18,17 +18,20 @@
       {
         "network": "GitHub",
         "username": "estasney",
-        "url": "https://github.com/estasney"
+        "url": "https://github.com/estasney",
+        "icon": "fab fa-github"
       },
       {
         "network": "LinkedIn",
         "username": "",
-        "url": "https://www.linkedin.com/in/eric-stasney-965962108"
+        "url": "https://www.linkedin.com/in/eric-stasney-965962108",
+        "icon": "fab fa-linkedin"
       },
       {
         "network": "Kaggle",
         "username": "estasney",
-        "url": "https://www.kaggle.com/estasney"
+        "url": "https://www.kaggle.com/estasney",
+        "icon": "fab fa-kaggle"
       }
     ]
   },
@@ -37,13 +40,15 @@
       "name": "Cisco",
       "location": "Raleigh, NC (Remote)",
       "description": "Talent Hub",
-      "position": "HR Analyst and Developer",
+      "position": "Developer and Analyst",
       "url": "",
       "startDate": "Aug 2016",
       "endDate": "",
       "summary": "Talent Hub is a small team delivering critical talent pipelines in an ever-changing Talent Landscape.",
       "highlights": [
         "Fulfill Talent Intelligence requests by senior leadership. These requests involve fetching unstructured data from external sources, normalizing and generating insights. This provides an invaluable quantitative analysis for data-driven decisions.",
+        "Develop Topic Modelling pipeline using unsupervised ML methods to ingest raw job descriptions and output topics",
+        "Refined Topic Modelling by first developing an annotation web application to gather expert classifications and later training a multi-label classifier",
         "Developed a web scraper for internal use. Users perform extractions via the Chrome Extension and manage them via a web application written in Flask. This replaced the team's previous method of copy/pasting multiple text fields between browser tabs.",
         "Compiled a Company Name Disambiguation Python package. I found that 'in the wild' companies can have hundreds of name variants. This makes answering questions like, 'How many of X are from Y company?' extremely tedious. I used a directed graph data structure to represent a hierarchy of names where multiple uncommon names map to one common name.",
         "Audited Cisco's external job postings for formatting issues. Determined that 30% of job postings had major formatting issues such as literal newlines, visible HTML tags and visibly different font styles between paragraphs. Uncovered root cause to be an Excel spreadsheet that was being used as a templating engine for copy/pasting job descriptions.",
