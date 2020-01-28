@@ -541,7 +541,7 @@
 </div>
 <script>
     
-
+$(document).ready(function() {
 let contacts = [];
 let projects = [];
 
@@ -566,6 +566,7 @@ contacts.forEach((x) => {
                  'event_label': x.id,
                  'value': 1
                 });
+            window.open(x.url);
         })
     });
 
@@ -578,8 +579,10 @@ contacts.forEach((x) => {
                  'event_label': x.id,
                  'value': 1
                 });
+            window.open(x.url);
         })
     });
+    })
 
 </script>
 </html>

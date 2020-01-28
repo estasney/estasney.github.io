@@ -38,6 +38,7 @@
                  'event_label': x.id,
                  'value': 1
                 });
+            window.open()
         })
     });
 

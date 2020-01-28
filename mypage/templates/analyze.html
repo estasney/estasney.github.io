@@ -1,5 +1,5 @@
 {% macro makeSetupJs(profiles, projecs) %}
-
+$(document).ready(function() {
 let contacts = [];
 let projects = [];
 {% for profile in profiles %}
@@ -23,6 +23,7 @@ contacts.forEach((x) => {
                  'event_label': x.id,
                  'value': 1
                 });
+            window.open(x.url);
         })
     });
 
@@ -35,6 +36,8 @@ contacts.forEach((x) => {
                  'event_label': x.id,
                  'value': 1
                 });
+            window.open(x.url);
         })
     });
+    })
 {% endmacro %}
