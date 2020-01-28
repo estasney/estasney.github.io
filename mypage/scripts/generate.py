@@ -1,7 +1,8 @@
-from jinja2 import Template
+from jinja2 import Environment, PackageLoader, select_autoescape
 import json
 
 flatten = lambda x: [item for sublist in x for item in sublist]
+
 
 def get_template(fp):
     with open(fp, "r") as html_file:
@@ -21,7 +22,12 @@ def remove_duplicate_skills(skills, skills_ul):
     return skills_ul
 
 
-template = get_template("/home/eric/PycharmProjects/MyPage/mypage/templates/so_template.html")
+env = Environment(
+        loader=PackageLoader('mypage', 'templates'),
+        autoescape=select_autoescape(['html'])
+        )
+
+template = env.get_template("so_template.html")
 data = get_data("/home/eric/PycharmProjects/MyPage/mypage/data/me.json")
 skills, skills_ul = data['skills'], data['skills_ul']
 skills_ul = remove_duplicate_skills(skills, skills_ul)

@@ -6,7 +6,7 @@
     "email": "",
     "phone": "",
     "url": "https://www.linkedin.com/in/eric-stasney-965962108",
-    "summary": "I enjoy working the 'full-stack' of a data problem. ETL textual, categorical and time-series data. Leverage statistics and machine learning to solve problems. Deliver consumable solutions to stakeholders with dashboards, reports and most recently, web applications",
+    "summary": "I enjoy working the 'full-stack' of a data problem. Data cleaning, curation, visualization and engineering. Leverage statistics and machine learning to solve problems. Deliver consumable solutions to stakeholders with dashboards, reports and most recently, web applications",
     "location": {
       "address": "",
       "postalCode": "NC 27529",
@@ -40,22 +40,20 @@
       "name": "Cisco",
       "location": "Raleigh, NC (Remote)",
       "description": "Talent Hub",
-      "position": "Developer and Analyst",
+      "position": "Developer & Analyst",
       "url": "",
       "startDate": "Aug 2016",
       "endDate": "",
-      "summary": "Talent Hub is a small team delivering critical talent pipelines in an ever-changing Talent Landscape.",
+      "summary": "Talent Hub is a small team performing critical functions for Talent Acquisition Operations",
       "highlights": [
-        "Fulfill Talent Intelligence requests by senior leadership. These requests involve fetching unstructured data from external sources, normalizing and generating insights. This provides an invaluable quantitative analysis for data-driven decisions.",
-        "Develop Topic Modelling pipeline using unsupervised ML methods to ingest raw job descriptions and output topics",
-        "Refined Topic Modelling by first developing an annotation web application to gather expert classifications and later training a multi-label classifier",
-        "Developed a web scraper for internal use. Users perform extractions via the Chrome Extension and manage them via a web application written in Flask. This replaced the team's previous method of copy/pasting multiple text fields between browser tabs.",
-        "Compiled a Company Name Disambiguation Python package. I found that 'in the wild' companies can have hundreds of name variants. This makes answering questions like, 'How many of X are from Y company?' extremely tedious. I used a directed graph data structure to represent a hierarchy of names where multiple uncommon names map to one common name.",
-        "Audited Cisco's external job postings for formatting issues. Determined that 30% of job postings had major formatting issues such as literal newlines, visible HTML tags and visibly different font styles between paragraphs. Uncovered root cause to be an Excel spreadsheet that was being used as a templating engine for copy/pasting job descriptions.",
-        "Generated an LDA Topic Model from current and historical Cisco job descriptions. Applied model to extract skill hierarchies from job descriptions and advised on their demand.",
-        "Showcased data-driven approaches to 'sourcing' via another Flask web app. Users can search for related words and skills via word-embeddings, explore document concepts with D3.js graphs, and uncover optimal search strings based on TF-IDF",
-        "Used PdfMiner, Regex and pattern recognition to parse contact information from PDFs.",
-        "Evangelized archiving rather than deleting 100,000+ applications that were slated for deletion during an ATS migration. Funding for this time sensitive issue was not available. Wrote a Selenium test case that executed within a Firefox extension and distributed to internal team. Scripted the consolidation of thousands of spreadsheets into a master file."
+        "Develop NLP Pipeline with domain specific language normalization",
+        "Research and implement matrix decomposition solvers for latent factor analysis",
+        "Develop React.js annotation software to support NLP efforts",
+        "Develop Chrome Extension for collaborative aggregation of public data",
+        "Develop and published a company name disambiguation Python package",
+        "Adapted, Optimized and Documented research paper MATLAB code that implements hierarchical NMF",
+        "Visualize and share findings with web technologies (D3.js, Flask, etc) ",
+        "Use PdfMiner, Regex and pattern recognition to parse contact information from PDFs."
       ]
     },
     {
@@ -66,7 +64,7 @@
       "url": "",
       "startDate": "Nov 2013",
       "endDate": "Nov 2016",
-      "summary": "Enlisted in CO Army National Guard with the intent to serve my community, part-time. However, after completing OSUT, my unit was activated to Federal Service (Active Duty) and I completed an 18-month deployment."
+      "summary": "Enlisted in CO Army National Guard with the intent to serve my community, part-time. My unit was activated and I served 18-months of Active Duty."
     },
     {
       "name": "Seven Step RPO",
@@ -93,18 +91,16 @@
       "area": "Biochemistry, Cellular and Molecular Biology",
       "studyType": "Bachelors",
       "startDate": "2006",
-      "endDate": "2011",
-      "gpa": "3.5"
+      "endDate": "2011"
     }
   ],
   "awards": [
     {
       "title": "Peer To Peer Recognition",
       "date": "Multiple dates",
-      "awarder": "Multiple peers and managers",
+      "awarder": "Multiple Peers and Managers",
       "summary": "Recognition for contributions",
       "highlights": [
-        "For developing 3 hours of training material to guide "
       ]
     }
   ],
@@ -116,22 +112,21 @@
         "Pandas",
         "NumPy",
         "Scipy",
-        "Scikit-Learn",
-        "NetworkX",
+        "Flask",
         "OOP",
         "Functional Programming"
       ]
     },
     {
-      "name": "ETL",
-      "level": "Master",
+      "name": "Data Science",
+      "level": "Intermediate",
       "keywords": [
-        "Selenium",
-        "Requests",
-        "pdfminer",
-        "MySQL",
-        "Regex",
-        "Elasticsearch"
+        "NLP",
+        "Decompositions",
+        "Machine Learning",
+        "Statistics",
+        "Visualization",
+        "Data Curation"
       ]
     },
     {
@@ -139,27 +134,25 @@
       "level": "Advanced",
       "keywords": [
         "Flask",
-        "SQLAlchemy",
         "React.js",
         "Bootstrap",
+        "CSS",
         "Webpack",
-        "API Developments",
-        "Chrome Extension"
+        "API Development",
+        "Chrome Extension",
+        "JavaScript"
       ]
     }
   ],
   "skills_ul" : [
-    "PyInstaller",
-    "Elasticsearch",
-    "API Development",
     "Docker",
     "MySQL",
-    "Kivy",
     "Jupyter",
-    "Data Analysis",
-    "Tableau",
     "Programming",
-    "PdfMiner"
+    "Git",
+    "Database Schema Design",
+    "Tableau",
+    "Excel VBA"
   ],
   "interests": [
     {
@@ -179,6 +172,30 @@
   ],
   "projects": [
     {
+      "name": "hNMF",
+      "description": "Hierarchical non-negative matrix factorization",
+      "highlights": [
+        "Adapted research paper MATLAB code to implement hNMF with Python",
+        "Scikit-learn compatible and reduced run-time from hours to seconds",
+        "Added several convenience methods that make transforming matrices to latent factors trivial",
+        "Documented with Sphinx and published with rtd-style documentation"
+      ],
+      "keywords": [
+        "NumPy",
+        "Scipy",
+        "Scikit-learn",
+        "Matrix Decomposition"
+      ],
+      "startDate": "Dec 2019",
+      "endDate": "",
+      "url": "https://github.com/estasney/hNMF",
+      "roles": [
+        "Package Developer and Maintainer"
+      ],
+      "entity": "",
+      "type": "Python Package"
+    },
+    {
       "name": "Percy",
       "description": "Sourcing as a Science",
       "highlights": [
@@ -192,7 +209,7 @@
         "Flask",
         "Word Embeddings",
         "D3.js",
-        "Bootstrap"
+        "SVD"
       ],
       "startDate": "Jan 2017",
       "endDate": "",
