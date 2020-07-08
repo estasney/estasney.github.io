@@ -131,7 +131,37 @@
             {% endfor %}
         </section>
     </section>
-
+    <section class="section margin1">
+        <header>
+            <h2 class="section-title">
+              Projects
+            <span class="item-count">({{projects|length}})</span>
+            </h2>
+        </header>
+        <section id="projects">
+            {% for project in projects %}
+            <div class="item">
+                <h3 class="name">
+                    {% if project.get('url', "") != "" %}
+                    <a id="{{project['name']}}" href="#">{{project['name']}}</a>
+                    {% else %}
+                    {{project['name']}}
+                    {% endif %}
+                </h3>
+                <div class="summary">
+                    {{project['summary']}}
+                </div>
+                <ul class="highlights">
+                    {% for highlight in project['highlights'] %}
+                    <li>
+                        <p>{{highlight}}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </section>
+    </section>
     <section class="section">
         <header>
             <h2 class="section-title">Education
@@ -169,81 +199,6 @@
             {% endfor %}
         </section>
     </section>
-    <section class="section">
-        <header>
-            <h2 class="section-title">Awards</h2>
-        </header>
-        <section id="awards">
-            {% for award in awards %}
-            <section class="award-item">
-                <input id="award-item-{{loop.index - 1}}" type="checkbox" class="toggle-item" checked="checked">
-                <label for="award-item-{{loop.index - 1}}"></label>
-                <header>
-                    <div class="header-left">
-                        <div class="title">
-                            {{award['title']}}
-                        </div>
-                        <div class="awarder">
-                            {{award['awarder']}}
-                        </div>
-                    </div>
-                    <div class="date">
-                        {{award['date']}}
-                    </div>
-                </header>
-                <div class="item">
-                    <div class="summary">
-                        <p></p>
-                        <p>{{award['summary']}}</p>
-                        {% if 'highlight' in award %}
-                        <ul class="highlights">
-
-                            {% for highlight in award['highlights'] %}
-                            <li>
-                                <p>{{highlight}}</p>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                    </div>
-                </div>
-            </section>
-            {% endfor %}
-        </section>
-    </section>
-
-    <section class="section margin1">
-        <header>
-            <h2 class="section-title">Projects</h2>
-        </header>
-        <section id="projects">
-            {% for project in projects %}
-            <div class="item">
-                <h3 class="name">
-                    {% if project.get('url', "") != "" %}
-                    <a id="{{project['name']}}" href="#">{{project['name']}}</a>
-                    {% else %}
-                    {{project['name']}}
-                    {% endif %}
-
-                </h3>
-                <div class="summary">
-                    {{project['summary']}}
-                </div>
-                <ul class="highlights">
-                    {% for highlight in project['highlights'] %}
-                    <li>
-                        <p>{{highlight}}</p>
-                    </li>
-                    {% endfor %}
-                </ul>
-
-            </div>
-            {% endfor %}
-        </section>
-    </section>
-
-
     <section class="section margin1">
         <header>
             <h2 class="section-title">Interests</h2>
