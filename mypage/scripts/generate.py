@@ -1,5 +1,6 @@
 from jinja2 import Environment, PackageLoader, select_autoescape
 import yaml
+import os
 
 
 def flatten(coll):
@@ -29,11 +30,14 @@ env = Environment(
 
 if __name__ == '__main__':
     template = env.get_template("so_template.html")
-    data = get_data("../data/me.yml")
+    data_path = os.path.join("..", "data", "me.yml")
+    data = get_data(data_path)
     skills, skills_ul = data['skills'], data['skills_ul']
     skills_ul = remove_duplicate_skills(skills, skills_ul)
     output = template.render(basics=data['basics'], skills=skills, skills_ul=skills_ul, work=data['work'],
                              educations=data['education'], awards=data['awards'], projects=data['projects'],
                              interests=data['interests'])
-    with open("../../index.html", "w+") as html_file:
+
+    page_out = os.path.join("..", "..", "index.html")
+    with open(page_out, "w+") as html_file:
         html_file.write(output)
