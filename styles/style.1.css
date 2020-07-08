@@ -224,7 +224,6 @@ section .location {
 
 #header>#profiles,
 #header>#contact,
-#skills,
 #languages,
 #interests {
   display: -webkit-box;
