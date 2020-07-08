@@ -1,0 +1,197 @@
+basics:
+  name: Eric Stasney
+  label: Developer and Analyst
+  image: ''
+  email: ''
+  phone: ''
+  url: https://www.linkedin.com/in/eric-stasney
+  summary: I enjoy working the full-stack of a data problem. I've had the opportunity to work with a large range of technologies from Data Science, Application Development and DevOps.
+  location:
+    address: ''
+    postalCode: NC 27529
+    city: Garner
+    countryCode: US
+    region: North Carolina
+  profiles:
+  - network: GitHub
+    username: estasney
+    url: https://github.com/estasney
+    icon: fab fa-github
+  - network: LinkedIn
+    username: ''
+    url: https://www.linkedin.com/in/eric-stasney-965962108
+    icon: fab fa-linkedin
+  - network: Kaggle
+    username: estasney
+    url: https://www.kaggle.com/estasney
+    icon: fab fa-kaggle
+work:
+- name: Cisco
+  location: Raleigh, NC (Remote)
+  description: Talent Hub
+  position: Developer & Analyst
+  url: ''
+  startDate: Aug 2016
+  endDate: ''
+  summary: Talent Hub is a small team performing critical functions for Talent Acquisition
+    Operations
+  highlights:
+  - Develop NLP Pipeline with domain specific language normalization (spaCy)
+  - Research and implement matrix decomposition solvers for latent factor analysis (numpy, scipy)
+  - Develop and maintain two data intensive Chrome Extensions (react.js)
+  - Develop server backend for Chrome Extensions and deploy to AWS EC2 (flask, docker, mysql, nginx)
+  - Develop web-based annotation software to support NLP efforts (flask, react.js)
+  - Develop and published a company name disambiguation Python package (network)
+  - Adapted, Optimized and Documented research paper MATLAB code that implements Hierarchical
+    NMF with Python (numpy, scikit-learn, sphinx)
+  - Implement ETL pipeline that digests weekly data pushes to Elasticsearch and presents in Kibana dashboard
+  - Use PdfMiner, Regex and pattern recognition to parse contact information from PDFs.
+- name: US Army / COARNG
+  location: Denver, CO
+  description: Military Police
+  position: E4 (Specialist)
+  url: ''
+  startDate: Nov 2013
+  endDate: Nov 2016
+  summary: Enlisted in CO Army National Guard with the intent to serve my community,
+    part-time. My unit was activated and I served 18-months of Active Duty.
+- name: Seven Step RPO
+  location: Denver, CO
+  description: Talent Acquisition - Suntrust Bank
+  position: Recruiter
+  startDate: July 2013
+  endDate: Sept 2014
+  summary: Qualify candidates by conducting phone interviews to ensure technical
+    and cultural match to client needs
+- name: Edwards Student Housing & American Campus Communities
+  location: Eastern U.S.
+  description: Student Housing
+  position: Assistant General Manager
+  startDate: May 2011
+  endDate: May 2013
+  summary: Travelled between company properties to supervise and audit property operations
+education:
+- institution: The University of Tennessee
+  area: Biochemistry, Cellular and Molecular Biology
+  studyType: Bachelors
+  startDate: '2006'
+  endDate: '2011'
+awards:
+- title: Peer To Peer Recognition
+  date: Multiple dates
+  awarder: Multiple Peers and Managers
+  summary: Recognition for contributions
+  highlights: []
+skills:
+- name: Python
+  level: Master
+  keywords:
+  - Pandas
+  - NumPy
+  - Scipy
+  - Flask
+  - spaCy
+- name: Data Science
+  level: Advanced
+  keywords:
+  - NLP
+  - Decompositions
+  - Statistics
+  - Visualization
+  - Data Engineering
+- name: Application Development
+  level: Advanced
+  keywords:
+  - Docker
+  - Containers
+  - Flask
+  - Nginx
+  - React.js
+  - Webpack
+  - API Development
+  - Chrome Extension
+skills_ul:
+- Docker
+- Elasticsearch
+- Kibana
+- MySQL
+- Jupyter Notebooks
+- Git
+- Database Schema Design
+interests:
+- name: IoT & Robotics
+  keywords:
+  - Raspberry Pi
+  - Arduino
+  - C
+- name: Electrical Engineering
+  keywords:
+  - Circuits
+  - Fritzing
+projects:
+- name: hNMF
+  description: Hierarchical non-negative matrix factorization
+  highlights:
+  - Adapted research paper MATLAB code to implement hNMF with Python
+  - Scikit-learn compatible and reduced typical run-time from hours to seconds
+  - Added several convenience methods that make transforming matrices to latent factors
+    trivial
+  - Documented with Sphinx and published with rtd-style documentation
+  keywords:
+  - NumPy
+  - Scipy
+  - Scikit-learn
+  - Matrix Decomposition
+  - Sphinx
+  startDate: Dec 2019
+  endDate: ''
+  url: https://github.com/estasney/hNMF
+  roles:
+  - Package Developer and Maintainer
+  entity: ''
+  type: Python Package
+- name: DupCheck
+  description: Chrome Extension that alerts recruiter users if a social profile is tracked in their ATS
+  highlights:
+    - React.js Extension with Authentication
+    - Self-managed AWS VPC
+    - Containerized Flask API with Nginx reverse proxy
+    - Subsecond response times with 1 million records using AWS micro instances
+  keywords:
+    - React.js
+    - Docker
+    - AWS
+    - MySQL
+    - API Development
+- name: Percy
+  description: Sourcing as a Science
+  highlights:
+  - 2nd round selection in Cisco's Innovate Everywhere Challenge
+  - Given a body of text, uses Pagerank algorithm to identify central topics. The
+    result is returned and displayed in a D3.js force-directed graph.
+  - Locates the 'most discriminating' words in a document by referencing domain specific
+    word probabilities. Provides insights into building efficient and relevant searches.
+  - Showcases word embeddings with a 'This + That' page. E.g. (Hardware + Storage)
+    returns SAN, Storage Area Networks, NAS, etc
+  keywords:
+  - NLP
+  - Flask
+  - Word Embeddings
+  - D3.js
+  startDate: Jan 2017
+  endDate: ''
+  url: https://estasney.pythonanywhere.com
+  roles:
+  - Individual Project
+  entity: ''
+  type: web application
+- name: Web Scraper
+  description: Web scraper for internal team use
+  highlights:
+  - 'Scraper exists of two main components : a Chrome Extension and Web Application'
+  - Tracks extractions and prevents usage over a limit set by an administrator
+  - Manages extraction target lists to fetch only unseen data
+  - Parses raw strings into structured data. Transforms data into spreadsheet form
+    compatible with internal ATS.
+  - Builds word clouds based on word frequency from extractions
+  - Integrates with contact enrichment providers

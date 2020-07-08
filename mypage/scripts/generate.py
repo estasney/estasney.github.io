@@ -1,7 +1,5 @@
 from jinja2 import Environment, PackageLoader, select_autoescape
-import json
-
-flatten = lambda x: [item for sublist in x for item in sublist]
+import yaml
 
 
 def get_template(fp):
@@ -20,6 +18,11 @@ def remove_duplicate_skills(skills, skills_ul):
 
     skills_ul = [skill for skill in skills_ul if skill not in seen]
     return skills_ul
+
+
+def get_data(fp):
+    with open(fp, 'r') as fp:
+        return yaml.load(fp, Loader=yaml.FullLoader)
 
 
 env = Environment(
