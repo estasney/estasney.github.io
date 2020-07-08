@@ -669,18 +669,12 @@ ul.courses li:hover {
 
 @media print {
   #resume {
-    margin: 0;
-    padding: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
     line-height: 1.3;
     /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
-  }
-  @page {
-    margin: 1cm 1.4cm;
-  }
-  .item-count {
-    display: none;
   }
   .company::before,
   .institution::before,
@@ -748,6 +742,14 @@ ul.courses li:hover {
   .item.display {
     display: block;
     opacity: 1 !important;
+  }
+
+  #work {
+    break-after: page;
+  }
+
+  a {
+    color: #40494f!important;
   }
 }
 
