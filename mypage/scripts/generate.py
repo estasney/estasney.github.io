@@ -2,14 +2,11 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 import yaml
 
 
-def get_template(fp):
-    with open(fp, "r") as html_file:
-        return Template(html_file.read())
-
-
-def get_data(fp):
-    with open(fp, 'r') as json_file:
-        return json.load(json_file)
+def flatten(coll):
+    """From one of my favorite StackOverflow answers
+    https://stackoverflow.com/questions/952914/how-to-make-a-flat-list-out-of-list-of-lists/952952#952952
+    """
+    return [item for sublist in coll for item in sublist]
 
 
 def remove_duplicate_skills(skills, skills_ul):
@@ -30,12 +27,13 @@ env = Environment(
         autoescape=select_autoescape(['html'])
         )
 
-template = env.get_template("so_template.html")
-data = get_data("/home/eric/PycharmProjects/MyPage/mypage/data/me.json")
-skills, skills_ul = data['skills'], data['skills_ul']
-skills_ul = remove_duplicate_skills(skills, skills_ul)
-output = template.render(basics=data['basics'], skills=skills, skills_ul=skills_ul, work=data['work'],
-                         educations=data['education'], awards=data['awards'], projects=data['projects'],
-                         interests=data['interests'])
-with open("/home/eric/PycharmProjects/MyPage/index.html", "w+") as html_file:
-    html_file.write(output)
+if __name__ == '__main__':
+    template = env.get_template("so_template.html")
+    data = get_data("../data/me.yml")
+    skills, skills_ul = data['skills'], data['skills_ul']
+    skills_ul = remove_duplicate_skills(skills, skills_ul)
+    output = template.render(basics=data['basics'], skills=skills, skills_ul=skills_ul, work=data['work'],
+                             educations=data['education'], awards=data['awards'], projects=data['projects'],
+                             interests=data['interests'])
+    with open("../../index.html", "w+") as html_file:
+        html_file.write(output)
