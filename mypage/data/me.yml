@@ -1,6 +1,6 @@
 basics:
   name: Eric Stasney
-  label: Developer and Analyst
+  label: Full Stack Data Scientist
   image: ''
   email: ''
   phone: ''
@@ -29,7 +29,7 @@ work:
 - name: Cisco
   location: Raleigh, NC (Remote)
   description: Talent Hub
-  position: Developer & Analyst
+  position: Full Stack Data Scientist
   url: ''
   startDate: Aug 2016
   endDate: ''
