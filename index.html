@@ -15,7 +15,7 @@
     <meta charset="utf-8">
     <title>Eric Stasney</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles/style.1.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.2.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet"
           type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
@@ -45,19 +45,22 @@
             
             <div class="website">
                 <span class="fab fa-github">
-                    <a id="GitHub" href="#">GitHub</a>
+                    <a id="GitHub" href="#" class="defaultLink">GitHub</a>
+                    <a href="#" class="printLink">estasney</a>
                 </span>
             </div>
             
             <div class="website">
                 <span class="fab fa-linkedin">
-                    <a id="LinkedIn" href="#">LinkedIn</a>
+                    <a id="LinkedIn" href="#" class="defaultLink">LinkedIn</a>
+                    <a href="#" class="printLink">eric-stasney</a>
                 </span>
             </div>
             
             <div class="website">
                 <span class="fab fa-kaggle">
-                    <a id="Kaggle" href="#">Kaggle</a>
+                    <a id="Kaggle" href="#" class="defaultLink">Kaggle</a>
+                    <a href="#" class="printLink">estasney</a>
                 </span>
             </div>
             
@@ -314,81 +317,12 @@
             
         </section>
     </section>
-
-    <section class="section">
-        <header>
-            <h2 class="section-title">Education
-                <span class="item-count">(1)</span>
-            </h2>
-        </header>
-        <section id="education">
-            
-            <section class="education-item">
-                <header>
-                    <div class="header-left">
-                        <div class="studyType">
-                            Bachelors -
-                        </div>
-                        <div class="area">
-                            Biochemistry, Cellular and Molecular Biology
-                        </div>
-                        <div class="institution">
-                            The University of Tennessee
-                        </div>
-                    </div>
-                    <div class="date">
-                        <span class="startDate">2006</span>
-                        <span class="endDate"> - 2011</span>
-                    </div>
-                </header>
-                <!-- hack to display gpa correctly -->
-                <div class="item"></div>
-                <div class="item">
-                    <div class="gpa">
-                        <strong> Grade:</strong> <span></span>
-                    </div>
-                </div>
-            </section>
-            
-        </section>
-    </section>
-    <section class="section">
-        <header>
-            <h2 class="section-title">Awards</h2>
-        </header>
-        <section id="awards">
-            
-            <section class="award-item">
-                <input id="award-item-0" type="checkbox" class="toggle-item" checked="checked">
-                <label for="award-item-0"></label>
-                <header>
-                    <div class="header-left">
-                        <div class="title">
-                            Peer To Peer Recognition
-                        </div>
-                        <div class="awarder">
-                            Multiple Peers and Managers
-                        </div>
-                    </div>
-                    <div class="date">
-                        Multiple dates
-                    </div>
-                </header>
-                <div class="item">
-                    <div class="summary">
-                        <p></p>
-                        <p>Recognition for contributions</p>
-                        
-                    </div>
-                </div>
-            </section>
-            
-        </section>
-    </section>
-
     <section class="section margin1">
         <header>
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">
+              Projects
+            <span class="item-count">(4)</span>
+            </h2>
         </header>
         <section id="projects">
             
@@ -397,7 +331,6 @@
                     
                     <a id="hNMF" href="#">hNMF</a>
                     
-
                 </h3>
                 <div class="summary">
                     
@@ -421,7 +354,6 @@
                     </li>
                     
                 </ul>
-
             </div>
             
             <div class="item">
@@ -429,7 +361,6 @@
                     
                     DupCheck
                     
-
                 </h3>
                 <div class="summary">
                     
@@ -453,7 +384,6 @@
                     </li>
                     
                 </ul>
-
             </div>
             
             <div class="item">
@@ -461,7 +391,6 @@
                     
                     <a id="Percy" href="#">Percy</a>
                     
-
                 </h3>
                 <div class="summary">
                     
@@ -485,7 +414,6 @@
                     </li>
                     
                 </ul>
-
             </div>
             
             <div class="item">
@@ -493,7 +421,6 @@
                     
                     Web Scraper
                     
-
                 </h3>
                 <div class="summary">
                     
@@ -525,13 +452,41 @@
                     </li>
                     
                 </ul>
-
             </div>
             
         </section>
     </section>
-
-
+    <section class="section">
+        <header>
+            <h2 class="section-title">Education
+            </h2>
+        </header>
+        <section id="education">
+            
+            <section class="education-item">
+                <header>
+                    <div class="header-left">
+                        <div class="studyType">
+                            Bachelors -
+                        </div>
+                        <div class="area">
+                            Biochemistry, Cellular and Molecular Biology
+                        </div>
+                        <div class="institution">
+                            The University of Tennessee
+                        </div>
+                    </div>
+                    <div class="date">
+                        <span class="startDate">2006</span>
+                        <span class="endDate"> - 2011</span>
+                    </div>
+                </header>
+                <!-- empty item for spacing -->
+                <div class="item"></div>
+            </section>
+            
+        </section>
+    </section>
     <section class="section margin1">
         <header>
             <h2 class="section-title">Interests</h2>
@@ -579,7 +534,7 @@ let projects = [];
     "url": "https://github.com/estasney"});
 
     contacts.push({"id": "LinkedIn",
-    "url": "https://www.linkedin.com/in/eric-stasney-965962108"});
+    "url": "https://www.linkedin.com/in/eric-stasney"});
 
     contacts.push({"id": "Kaggle",
     "url": "https://www.kaggle.com/estasney"});
