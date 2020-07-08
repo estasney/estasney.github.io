@@ -45,7 +45,8 @@
             {% for profile in profiles %}
             <div class="website">
                 <span class="{{ profile['icon'] }}">
-                    <a id="{{ profile['network'] }}" href="#">{{profile['network']}}</a>
+                    <a id="{{ profile['network'] }}" href="#" class="defaultLink">{{profile['network']}}</a>
+                    <a href="#" class="printLink">{{profile['handle']}}</a>
                 </span>
             </div>
             {% endfor %}

@@ -16,14 +16,17 @@ basics:
   - network: GitHub
     username: estasney
     url: https://github.com/estasney
+    handle: estasney
     icon: fab fa-github
   - network: LinkedIn
     username: ''
-    url: https://www.linkedin.com/in/eric-stasney-965962108
+    url: https://www.linkedin.com/in/eric-stasney
+    handle: eric-stasney
     icon: fab fa-linkedin
   - network: Kaggle
     username: estasney
     url: https://www.kaggle.com/estasney
+    handle: estasney
     icon: fab fa-kaggle
 work:
 - name: Cisco
