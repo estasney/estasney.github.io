@@ -51,6 +51,13 @@
             </div>
             {% endfor %}
         </div>
+        {% if contact_info is defined %}
+          <div id="contact-inline">
+          {% for contact in contact_info %}
+            <span>{{ contact }}</span>
+          {% endfor %}
+          </div>
+        {% endif %}
     </header>
     <section class="section main-summary">
         <section>
