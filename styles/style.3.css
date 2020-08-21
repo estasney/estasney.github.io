@@ -510,10 +510,6 @@ ul.courses li:hover {
   width: 15em;
 }
 
-.printLink {
-  display: none;
-}
-
 /* Skill chart */
 
 .level {
@@ -671,6 +667,10 @@ ul.courses li:hover {
   }
 }
 
+.printLink {
+    display: none;
+  }
+
 @media print {
   #resume {
     margin-left: 2rem;
@@ -754,6 +754,10 @@ ul.courses li:hover {
 
   a {
     color: #40494f!important;
+  }
+
+  .printHide {
+    display: none;
   }
 
   .defaultLink {
