@@ -166,6 +166,19 @@ projects:
     - AWS
     - MySQL
     - API Development
+- name: Talent Insights Mailer
+  description: Weekly mailer with insights for hiring leaders
+  highlights:
+    - Fully modular, extensible and customizable ETL pipeline
+    - Provides diversity, employer and skills analysis
+    - Embedded charts and wordclouds
+    - Automated generation and delivery of emails via .NET API
+  keywords:
+    - Business Insights
+    - Data Visualization
+    - Data Pipeline
+    - Email
+    - Matplotlib
 - name: Percy
   description: Sourcing as a Science
   highlights:
