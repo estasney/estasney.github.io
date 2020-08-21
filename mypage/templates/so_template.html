@@ -43,7 +43,7 @@
       </span>
         <div id="contact">
             {% for profile in profiles %}
-            <div class="website">
+            <div class="website printHide">
                 <span class="{{ profile['icon'] }}">
                     <a id="{{ profile['network'] }}" href="#" class="defaultLink">{{profile['network']}}</a>
                     <a href="#" class="printLink">{{profile['handle']}}</a>
@@ -142,13 +142,13 @@
         <section id="projects">
             {% for project in projects %}
             <div class="item">
-                <h3 class="name">
+                <div class="name">
                     {% if project.get('url', "") != "" %}
                     <a id="{{project['name']}}" href="#">{{project['name']}}</a>
                     {% else %}
                     {{project['name']}}
                     {% endif %}
-                </h3>
+                </div>
                 <div class="summary">
                     {{project['summary']}}
                 </div>
