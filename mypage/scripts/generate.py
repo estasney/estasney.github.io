@@ -62,6 +62,9 @@ if __name__ == '__main__':
                              educations=data['education'], awards=data['awards'], projects=data['projects'],
                              interests=data['interests'], contact_info=contact_info)
 
-    page_out = os.path.join("..", "..", "index.html")
+    if args.contacts:
+        page_out = os.path.join("..", "..", "index-contact.html")
+    else:
+        page_out = os.path.join("..", "..", "index.html")
     with open(page_out, "w+") as html_file:
         html_file.write(output)
