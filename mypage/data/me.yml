@@ -39,16 +39,15 @@ work:
   summary: Talent Hub is a small team performing critical functions for Talent Acquisition
     Operations
   highlights:
-  - Develop NLP Pipeline with domain specific language normalization (spaCy)
+  - Develop NLP Pipeline with domain specific language normalization (spacy)
   - Research and implement matrix decomposition solvers for latent factor analysis (numpy, scipy)
-  - Develop and maintain two data intensive Chrome Extensions (react.js)
+  - Develop and maintain two data intensive Chrome Extensions (react)
   - Develop server backend for Chrome Extensions and deploy to AWS EC2 (flask, docker, mysql, nginx)
-  - Develop web-based annotation software to support NLP efforts (flask, react.js)
-  - Develop and published a company name disambiguation Python package (network)
+  - Develop web-based annotation software to support NLP efforts (flask, react)
+  - Develop and published a company name disambiguation Python package (networkx)
   - Adapted, Optimized and Documented research paper MATLAB code that implements Hierarchical
     NMF with Python (numpy, scikit-learn, sphinx)
-  - Implement ETL pipeline that digests weekly data pushes to Elasticsearch and presents in Kibana dashboard
-  - Use PdfMiner, Regex and pattern recognition to parse contact information from PDFs.
+  - Implement ETL pipelines with various technologies (python, elk, superset)
 - name: US Army / COARNG
   location: Denver, CO
   description: Military Police
@@ -98,18 +97,20 @@ skills:
   level: Advanced
   keywords:
   - NLP
+  - Machine Learning
   - Decompositions
   - Statistics
   - Visualization
   - Data Engineering
+  - Business Intelligence
 - name: Application Development
   level: Advanced
   keywords:
-  - Docker
+  - AWS
   - Containers
   - Flask
   - Nginx
-  - React.js
+  - React
   - Webpack
   - API Development
   - Chrome Extension
@@ -120,6 +121,8 @@ skills_ul:
 - MySQL
 - Jupyter Notebooks
 - Git
+- Github
+- SQL
 - Database Schema Design
 interests:
 - name: IoT & Robotics
@@ -136,10 +139,10 @@ projects:
   description: Hierarchical non-negative matrix factorization
   highlights:
   - Adapted research paper MATLAB code to implement hNMF with Python
-  - Scikit-learn compatible and reduced typical run-time from hours to seconds
-  - Added several convenience methods that make transforming matrices to latent factors
-    trivial
-  - Documented with Sphinx and published with rtd-style documentation
+  - Scikit-learn compatible
+  - Reduced run-time from hours to seconds
+  - Added several convenience methods for transforming matrices to interpretable latent factors
+  - Fully documented with Sphinx and published with documentation
   keywords:
   - NumPy
   - Scipy
@@ -154,14 +157,14 @@ projects:
   entity: ''
   type: Python Package
 - name: DupCheck
-  description: Chrome Extension that alerts recruiter users if a social profile is tracked in their ATS
+  description: Application for alerting recruiters if a social profile is tracked in their ATS
   highlights:
-    - React.js Extension with Authentication
-    - Self-managed AWS VPC
+    - React Chome Extension with Authentication
     - Containerized Flask API with Nginx reverse proxy
     - Subsecond response times with 1 million records using AWS micro instances
+    - Test suite with pytest and hypothesis
   keywords:
-    - React.js
+    - React
     - Docker
     - AWS
     - MySQL
