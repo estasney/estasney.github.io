@@ -1,6 +1,7 @@
 from jinja2 import Environment, PackageLoader, select_autoescape
 import yaml
 import os
+import argparse
 
 
 def flatten(coll):
@@ -22,6 +23,20 @@ def get_data(fp):
     with open(fp, 'r') as fp:
         return yaml.load(fp, Loader=yaml.FullLoader)
 
+def get_contact_info():
+    """
+    Prompt for contact info I want to leave out of VCS
+    """
+    contacts = []
+    while True:
+        try:
+            contact = input("Enter Contact [blank to stop]")
+            if not contact:
+                return contacts
+            contacts.append(contact)
+        except KeyboardInterrupt:
+            return contacts
+
 
 env = Environment(
         loader=PackageLoader('mypage', 'templates'),
@@ -29,6 +44,15 @@ env = Environment(
         )
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Generate Resume')
+    parser.add_argument('--contacts', help='Manually Enter Contact Information', action="store_true")
+    args = parser.parse_args()
+
+    if args.contacts:
+        contact_info = get_contact_info()
+    else:
+        contact_info = None
+
     template = env.get_template("so_template.html")
     data_path = os.path.join("..", "data", "me.yml")
     data = get_data(data_path)
@@ -36,7 +60,7 @@ if __name__ == '__main__':
     skills_ul = remove_duplicate_skills(skills, skills_ul)
     output = template.render(basics=data['basics'], skills=skills, skills_ul=skills_ul, work=data['work'],
                              educations=data['education'], awards=data['awards'], projects=data['projects'],
-                             interests=data['interests'])
+                             interests=data['interests'], contact_info=contact_info)
 
     page_out = os.path.join("..", "..", "index.html")
     with open(page_out, "w+") as html_file:
