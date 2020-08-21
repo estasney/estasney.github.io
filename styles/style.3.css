@@ -220,7 +220,8 @@ section .location {
 
 #contact-inline {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  font-weight: 900;
 }
 
 #contact-inline > span:not(:last-child):after {
