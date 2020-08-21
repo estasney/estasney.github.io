@@ -93,6 +93,14 @@ skills:
   - Scipy
   - Flask
   - spaCy
+  - SQLAlchemy
+  - Selenium
+  - Matplotlib
+  - Requests
+  - Pytest
+  - Hypothesis
+  - Cython
+  - Boto3
 - name: Data Science
   level: Advanced
   keywords:
