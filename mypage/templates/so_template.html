@@ -51,7 +51,7 @@
             </div>
             {% endfor %}
         </div>
-        {% if contact_info is defined %}
+        {% if contact_info is defined and contact_info is not none and contact_info|length > 0 %}
           <div id="contact-inline">
           {% for contact in contact_info %}
             <span>{{ contact }}</span>
