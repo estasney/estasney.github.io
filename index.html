@@ -15,7 +15,7 @@
     <meta charset="utf-8">
     <title>Eric Stasney</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles/style.2.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.3.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet"
           type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
@@ -43,21 +43,21 @@
       </span>
         <div id="contact">
             
-            <div class="website">
+            <div class="website printHide">
                 <span class="fab fa-github">
                     <a id="GitHub" href="#" class="defaultLink">GitHub</a>
                     <a href="#" class="printLink">estasney</a>
                 </span>
             </div>
             
-            <div class="website">
+            <div class="website printHide">
                 <span class="fab fa-linkedin">
                     <a id="LinkedIn" href="#" class="defaultLink">LinkedIn</a>
                     <a href="#" class="printLink">eric-stasney</a>
                 </span>
             </div>
             
-            <div class="website">
+            <div class="website printHide">
                 <span class="fab fa-kaggle">
                     <a id="Kaggle" href="#" class="defaultLink">Kaggle</a>
                     <a href="#" class="printLink">estasney</a>
@@ -114,6 +114,8 @@
                     
                     <li>NLP</li>
                     
+                    <li>Machine Learning</li>
+                    
                     <li>Decompositions</li>
                     
                     <li>Statistics</li>
@@ -121,6 +123,8 @@
                     <li>Visualization</li>
                     
                     <li>Data Engineering</li>
+                    
+                    <li>Business Intelligence</li>
                     
                 </ul>
             </div>
@@ -135,7 +139,7 @@
                 </div>
                 <ul class="keywords">
                     
-                    <li>Docker</li>
+                    <li>AWS</li>
                     
                     <li>Containers</li>
                     
@@ -143,7 +147,7 @@
                     
                     <li>Nginx</li>
                     
-                    <li>React.js</li>
+                    <li>React</li>
                     
                     <li>Webpack</li>
                     
@@ -158,6 +162,8 @@
         <section id="skills_ul">
             <ul class="keywords">
                 
+                <li>Docker</li>
+                
                 <li>Elasticsearch</li>
                 
                 <li>Kibana</li>
@@ -167,6 +173,10 @@
                 <li>Jupyter Notebooks</li>
                 
                 <li>Git</li>
+                
+                <li>Github</li>
+                
+                <li>SQL</li>
                 
                 <li>Database Schema Design</li>
                 
@@ -204,7 +214,7 @@
                     <ul class="highlights">
                         
                         <li>
-                            <p>Develop NLP Pipeline with domain specific language normalization (spaCy)</p>
+                            <p>Develop NLP Pipeline with domain specific language normalization (spacy)</p>
                         </li>
                         
                         <li>
@@ -212,7 +222,7 @@
                         </li>
                         
                         <li>
-                            <p>Develop and maintain two data intensive Chrome Extensions (react.js)</p>
+                            <p>Develop and maintain two data intensive Chrome Extensions (react)</p>
                         </li>
                         
                         <li>
@@ -220,11 +230,11 @@
                         </li>
                         
                         <li>
-                            <p>Develop web-based annotation software to support NLP efforts (flask, react.js)</p>
+                            <p>Develop web-based annotation software to support NLP efforts (flask, react)</p>
                         </li>
                         
                         <li>
-                            <p>Develop and published a company name disambiguation Python package (network)</p>
+                            <p>Develop and published a company name disambiguation Python package (networkx)</p>
                         </li>
                         
                         <li>
@@ -232,11 +242,7 @@
                         </li>
                         
                         <li>
-                            <p>Implement ETL pipeline that digests weekly data pushes to Elasticsearch and presents in Kibana dashboard</p>
-                        </li>
-                        
-                        <li>
-                            <p>Use PdfMiner, Regex and pattern recognition to parse contact information from PDFs.</p>
+                            <p>Implement ETL pipelines with various technologies (python, elk, superset)</p>
                         </li>
                         
                     </ul>
@@ -321,17 +327,17 @@
         <header>
             <h2 class="section-title">
               Projects
-            <span class="item-count">(4)</span>
+            <span class="item-count">(5)</span>
             </h2>
         </header>
         <section id="projects">
             
             <div class="item">
-                <h3 class="name">
+                <div class="name">
                     
                     <a id="hNMF" href="#">hNMF</a>
                     
-                </h3>
+                </div>
                 <div class="summary">
                     
                 </div>
@@ -342,37 +348,37 @@
                     </li>
                     
                     <li>
-                        <p>Scikit-learn compatible and reduced typical run-time from hours to seconds</p>
+                        <p>Scikit-learn compatible</p>
                     </li>
                     
                     <li>
-                        <p>Added several convenience methods that make transforming matrices to latent factors trivial</p>
+                        <p>Reduced run-time from hours to seconds</p>
                     </li>
                     
                     <li>
-                        <p>Documented with Sphinx and published with rtd-style documentation</p>
+                        <p>Added several convenience methods for transforming matrices to interpretable latent factors</p>
+                    </li>
+                    
+                    <li>
+                        <p>Fully documented with Sphinx and published with documentation</p>
                     </li>
                     
                 </ul>
             </div>
             
             <div class="item">
-                <h3 class="name">
+                <div class="name">
                     
                     DupCheck
                     
-                </h3>
+                </div>
                 <div class="summary">
                     
                 </div>
                 <ul class="highlights">
                     
                     <li>
-                        <p>React.js Extension with Authentication</p>
-                    </li>
-                    
-                    <li>
-                        <p>Self-managed AWS VPC</p>
+                        <p>React Chome Extension with Authentication</p>
                     </li>
                     
                     <li>
@@ -383,15 +389,49 @@
                         <p>Subsecond response times with 1 million records using AWS micro instances</p>
                     </li>
                     
+                    <li>
+                        <p>Test suite with pytest and hypothesis</p>
+                    </li>
+                    
                 </ul>
             </div>
             
             <div class="item">
-                <h3 class="name">
+                <div class="name">
+                    
+                    Talent Insights Mailer
+                    
+                </div>
+                <div class="summary">
+                    
+                </div>
+                <ul class="highlights">
+                    
+                    <li>
+                        <p>Fully modular, extensible and customizable ETL pipeline</p>
+                    </li>
+                    
+                    <li>
+                        <p>Provides diversity, employer and skills analysis</p>
+                    </li>
+                    
+                    <li>
+                        <p>Embedded charts and wordclouds</p>
+                    </li>
+                    
+                    <li>
+                        <p>Automated generation and delivery of emails via .NET API</p>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <div class="item">
+                <div class="name">
                     
                     <a id="Percy" href="#">Percy</a>
                     
-                </h3>
+                </div>
                 <div class="summary">
                     
                 </div>
@@ -417,11 +457,11 @@
             </div>
             
             <div class="item">
-                <h3 class="name">
+                <div class="name">
                     
                     Web Scraper
                     
-                </h3>
+                </div>
                 <div class="summary">
                     
                 </div>
@@ -544,6 +584,8 @@ let projects = [];
     
     projects.push({"id": "hNMF",
     "url": "https://github.com/estasney/hNMF"});
+    
+
     
 
     
