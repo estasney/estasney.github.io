@@ -697,7 +697,7 @@ ul.courses li:hover {
     content: "at ";
   }
   .main-summary {
-    padding: 2rem 0;
+    padding: 1.2em 1em!important;
   }
   .section {
     margin: .8rem 0;
