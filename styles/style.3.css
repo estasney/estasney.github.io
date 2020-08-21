@@ -218,6 +218,15 @@ section .location {
   margin-top: .5rem;
 }
 
+#contact-inline {
+  display: flex;
+  justify-content: center;
+}
+
+#contact-inline > span:not(:last-child):after {
+  content: "|";
+}
+
 #profiles .item {
   padding: 0;
 }
