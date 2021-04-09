@@ -1,6 +1,6 @@
 basics:
   name: Eric Stasney
-  label: Full Stack Data Scientist
+  label: Full Stack Data Engineer
   image: ''
   email: ''
   phone: ''
@@ -32,22 +32,22 @@ work:
 - name: Cisco
   location: Raleigh, NC (Remote)
   description: Talent Hub
-  position: Full Stack Data Scientist
+  position: Full Stack Data Engineer
   url: ''
   startDate: Aug 2016
   endDate: ''
   summary: Talent Hub is a small team performing critical functions for Talent Acquisition
     Operations
   highlights:
-  - Develop NLP Pipeline with domain specific language normalization (spacy)
-  - Research and implement matrix decomposition solvers for latent factor analysis (numpy, scipy)
-  - Develop and maintain two data intensive Chrome Extensions (react)
-  - Develop server backend for Chrome Extensions and deploy to AWS EC2 (flask, docker, mysql, nginx)
-  - Develop web-based annotation software to support NLP efforts (flask, react)
+  - Increased team productivity by developing a Chrome Extension for detecting duplicated social profiles (react, webpack)
+  - Replaced manual data entry workflow by developing desktop application for web scraping social profiles (electron, es6)
+  - Develop API for team applications and deploy to AWS (flask, docker, docker-compose, mysql, nginx, ec2, ecr)
+  - Create extensible framework for integrating additional applications (docker-compose, nginx, bash)
+  - Design and run data pipeline to match candidates to open jobs (pandas, mysql)
+  - Develop NLP pipeline with domain specific language normalization and pattern detection (spacy)
   - Develop and published a company name disambiguation Python package (networkx)
   - Adapted, Optimized and Documented research paper MATLAB code that implements Hierarchical
-    NMF with Python (numpy, scikit-learn, sphinx)
-  - Implement ETL pipelines with various technologies (python, elk, superset)
+    NMF with Python for unsupervised clustering (numpy, scikit-learn)
 - name: US Army / COARNG
   location: Denver, CO
   description: Military Police
@@ -94,13 +94,11 @@ skills:
   - Flask
   - spaCy
   - SQLAlchemy
-  - Selenium
-  - Matplotlib
-  - Requests
   - Pytest
-  - Hypothesis
   - Cython
   - Boto3
+  - Pytorch
+  - OpenCV
 - name: Data Science
   level: Advanced
   keywords:
@@ -115,23 +113,25 @@ skills:
   level: Advanced
   keywords:
   - AWS
-  - Containers
+  - Docker
+  - Docker Compose
   - Flask
   - Nginx
   - React
   - Webpack
   - API Development
   - Chrome Extension
+  - Electron
 skills_ul:
 - Docker
-- Elasticsearch
-- Kibana
+- Docker Compose
 - MySQL
 - Jupyter Notebooks
 - Git
-- Github
-- SQL
 - Database Schema Design
+- HTTP
+- Bash
+- Powershell
 interests:
 - name: IoT & Robotics
   keywords:
@@ -167,14 +167,18 @@ projects:
 - name: DupCheck
   description: Application for alerting recruiters if a social profile is tracked in their ATS
   highlights:
-    - React Chome Extension with Authentication
+    - React Chrome Extension with Authentication
     - Containerized Flask API with Nginx reverse proxy
-    - Subsecond response times with 1 million records using AWS micro instances
+    - Subsecond response times with 1 million records using AWS t3.micro instance
     - Test suite with pytest and hypothesis
   keywords:
     - React
     - Docker
+    - Docker Compose
+    - WAF
     - AWS
+    - ECR
+    - EC2
     - MySQL
     - API Development
 - name: Talent Insights Mailer
@@ -190,35 +194,13 @@ projects:
     - Data Pipeline
     - Email
     - Matplotlib
-- name: Percy
-  description: Sourcing as a Science
-  highlights:
-  - 2nd round selection in Cisco's Innovate Everywhere Challenge
-  - Given a body of text, uses Pagerank algorithm to identify central topics. The
-    result is returned and displayed in a D3.js force-directed graph.
-  - Locates the 'most discriminating' words in a document by referencing domain specific
-    word probabilities. Provides insights into building efficient and relevant searches.
-  - Showcases word embeddings with a 'This + That' page. E.g. (Hardware + Storage)
-    returns SAN, Storage Area Networks, NAS, etc
-  keywords:
-  - NLP
-  - Flask
-  - Word Embeddings
-  - D3.js
-  startDate: Jan 2017
-  endDate: ''
-  url: https://estasney.pythonanywhere.com
-  roles:
-  - Individual Project
-  entity: ''
-  type: web application
+    - Pywin32
 - name: Web Scraper
   description: Web scraper for internal team use
   highlights:
-  - 'Scraper exists of two main components : a Chrome Extension and Web Application'
-  - Tracks extractions and prevents usage over a limit set by an administrator
-  - Manages extraction target lists to fetch only unseen data
-  - Parses raw strings into structured data. Transforms data into spreadsheet form
-    compatible with internal ATS.
-  - Builds word clouds based on word frequency from extractions
-  - Integrates with contact enrichment providers
+    - 'Scraper exists of two main components : Electron Desktop Application and Web Application'
+    - Controls puppeteer browser that intercepts and parses pattern-matched JSON
+    - Compatible with SPA sites
+    - Track extractions and prevents usage over a limit set by an administrator
+    - Parses raw strings into structured data. Transforms data into spreadsheet form
+      compatible with internal ATS.
