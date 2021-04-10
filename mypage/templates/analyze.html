@@ -2,42 +2,39 @@
 $(document).ready(function() {
 let contacts = [];
 let projects = [];
-{% for profile in profiles %}
-    contacts.push({"id": "{{profile.network}}",
-    "url": "{{profile.url}}"});
+{% for profile in profiles -%}
+    contacts.push({"id": "{{profile.network}}", "url": "{{profile.url}}"});
 {% endfor %}
 
-{% for project in projects %}
-    {% if project.get('url', '') != '' %}
-    projects.push({"id": "{{project.name}}",
-    "url": "{{project.url}}"});
-    {% endif %}
-{% endfor %}
-
+{% for project in projects -%}
+    {% if project.get('url', '') != '' -%}
+    projects.push({"id": "{{project.name}}", "url": "{{project.url}}"});
+    {%- endif %}
+{%- endfor %}
 contacts.forEach((x) => {
-        const targetElement = document.querySelector(`#${x.id}`);
-        targetElement.addEventListener("click", (e) => {
-            e.preventDefault();
-            gtag('event', 'click', {
-                 'event_category': 'link',
-                 'event_label': x.id,
-                 'value': 1
-                });
-            window.open(x.url);
-        })
-    });
+      const targetElement = document.querySelector(`#${x.id}`);
+      targetElement.addEventListener("click", (e) => {
+          e.preventDefault();
+          gtag('event', 'click', {
+               'event_category': 'link',
+               'event_label': x.id,
+               'value': 1
+              });
+          window.open(x.url);
+      })
+  });
 
-    projects.forEach((x) => {
-        const targetElement = document.querySelector(`#${x.id}`);
-        targetElement.addEventListener("click", (e) => {
-            e.preventDefault();
-            gtag('event', 'click', {
-                 'event_category': 'project',
-                 'event_label': x.id,
-                 'value': 1
-                });
-            window.open(x.url);
-        })
-    });
+projects.forEach((x) => {
+    const targetElement = document.querySelector(`#${x.id}`);
+    targetElement.addEventListener("click", (e) => {
+        e.preventDefault();
+        gtag('event', 'click', {
+             'event_category': 'project',
+             'event_label': x.id,
+             'value': 1
+            });
+        window.open(x.url);
     })
+});
+})
 {% endmacro %}
