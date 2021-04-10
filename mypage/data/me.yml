@@ -82,12 +82,6 @@ education:
     studyType: Bachelors
     startDate: '2006'
     endDate: '2011'
-awards:
-  - title: Peer To Peer Recognition
-    date: Multiple dates
-    awarder: Multiple Peers and Managers
-    summary: Recognition for contributions
-    highlights: [ ]
 skills:
   - name: Python
     level: Master

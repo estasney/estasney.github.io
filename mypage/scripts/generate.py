@@ -60,7 +60,7 @@ if __name__ == '__main__':
     skills, skills_ul = data['skills'], data['skills_ul']
     skills_ul = remove_duplicate_skills(skills, skills_ul)
     output = template.render(basics=data['basics'], skills=skills, skills_ul=skills_ul, work=data['work'],
-                             educations=data['education'], awards=data['awards'], projects=data['projects'],
+                             educations=data['education'], projects=data['projects'],
                              interests=data['interests'], contact_info=contact_info, env=os.environ)
 
     if args.contacts:
