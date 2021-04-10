@@ -2,6 +2,7 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 import yaml
 import os
 import argparse
+import dotenv
 
 
 def flatten(coll):
@@ -52,7 +53,7 @@ if __name__ == '__main__':
         contact_info = get_contact_info()
     else:
         contact_info = None
-
+    dotenv.load_dotenv()
     template = env.get_template("so_template.html")
     data_path = os.path.join("..", "data", "me.yml")
     data = get_data(data_path)
@@ -60,7 +61,7 @@ if __name__ == '__main__':
     skills_ul = remove_duplicate_skills(skills, skills_ul)
     output = template.render(basics=data['basics'], skills=skills, skills_ul=skills_ul, work=data['work'],
                              educations=data['education'], awards=data['awards'], projects=data['projects'],
-                             interests=data['interests'], contact_info=contact_info)
+                             interests=data['interests'], contact_info=contact_info, env=os.environ)
 
     if args.contacts:
         page_out = os.path.join("..", "..", "index-contact.html")

@@ -5,12 +5,12 @@
 <html>
 
 <head><!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132355416-3"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ env['GA_CODE'] }}"></script>
     <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-132355416-3');
+  gtag('config', '{{ env['GA_CODE'] }}');
     </script>
     <meta charset="utf-8">
     <title>{{basics['name']}}</title>
@@ -42,22 +42,22 @@
           <span class="countryCode">{{location['countryCode']}}</span>
       </span>
         <div id="contact">
-            {% for profile in profiles %}
+            {% for profile in profiles -%}
             <div class="website printHide">
                 <span class="{{ profile['icon'] }}">
                     <a id="{{ profile['network'] }}" href="#" class="defaultLink">{{profile['network']}}</a>
                     <a href="#" class="printLink">{{profile['handle']}}</a>
                 </span>
             </div>
-            {% endfor %}
+            {%- endfor %}
         </div>
-        {% if contact_info is defined and contact_info is not none and contact_info|length > 0 %}
+        {% if contact_info is defined and contact_info is not none and contact_info|length > 0 -%}
           <div id="contact-inline">
-          {% for contact in contact_info %}
+          {%- for contact in contact_info -%}
             <span>{{ contact }}</span>
-          {% endfor %}
+          {%- endfor -%}
           </div>
-        {% endif %}
+        {%- endif %}
     </header>
     <section class="section main-summary">
         <section>
@@ -71,28 +71,26 @@
             <h2 class="section-title">Skills</h2>
         </header>
         <section id="skills">
-            {% for skill in skills %}
+            {% for skill in skills -%}
             <div class="item">
-                <h3 class="name">
-                    {{skill['name']}}
-                </h3>
+                <h3 class="name">{{skill['name']}}</h3>
                 <div class="level {{skill['level'].lower()}}">
                     <em>{{skill['level']}}</em>
                     <div class="bar"></div>
                 </div>
                 <ul class="keywords">
-                    {% for kw in skill['keywords'] %}
+                    {% for kw in skill['keywords'] -%}
                     <li>{{kw}}</li>
-                    {% endfor %}
+                    {%- endfor %}
                 </ul>
             </div>
-            {% endfor %}
+            {%- endfor %}
         </section>
         <section id="skills_ul">
             <ul class="keywords">
-                {% for skill in skills_ul %}
+                {%- for skill in skills_ul %}
                 <li>{{skill}}</li>
-                {% endfor %}
+                {%- endfor %}
 
             </ul>
         </section>
@@ -105,7 +103,7 @@
             </h2>
         </header>
         <section id="work">
-            {% for job in work %}
+            {% for job in work -%}
             <section class="work-item">
                 <input id="work-item-{{loop.index - 1}}" type="checkbox" class="toggle-item" {{'checked' if loop.index
                 == 1 else ''}}>
@@ -115,11 +113,11 @@
                     <div class="company">{{job['name']}}</div>
                     <div class="date clearfix">
                         <span class="startDate">{{job['startDate']}}</span>
-                        {% if job['endDate'] == "" %}
-                        {% set endDate = " to Present" %}
-                        {% else %}
-                        {% set endDate = " to {}".format(job['endDate']) %}
-                        {% endif %}
+                        {% if job['endDate'] == "" -%}
+                        {%- set endDate = " to Present" -%}
+                        {%- else %}
+                        {%- set endDate = " to {}".format(job['endDate']) -%}
+                        {%- endif %}
                         <span class="endDate">{{endDate}}</span>
                     </div>
                 </header>
@@ -128,15 +126,15 @@
                         {{job['summary']}}
                     </div>
                     <ul class="highlights">
-                        {% for highlight in job['highlights'] %}
+                        {% for highlight in job['highlights'] -%}
                         <li>
                             <p>{{highlight}}</p>
                         </li>
-                        {% endfor %}
+                        {%- endfor %}
                     </ul>
                 </div>
             </section>
-            {% endfor %}
+            {%- endfor %}
         </section>
     </section>
     <section class="section margin1">
@@ -147,24 +145,24 @@
             </h2>
         </header>
         <section id="projects">
-            {% for project in projects %}
+            {% for project in projects -%}
             <div class="item">
                 <div class="name">
-                    {% if project.get('url', "") != "" %}
+                    {% if project.get('url', "") != "" -%}
                     <a id="{{project['name']}}" href="#">{{project['name']}}</a>
-                    {% else %}
+                    {%- else %}
                     {{project['name']}}
-                    {% endif %}
+                    {%- endif %}
                 </div>
                 <div class="summary">
                     {{project['summary']}}
                 </div>
                 <ul class="highlights">
-                    {% for highlight in project['highlights'] %}
+                    {% for highlight in project['highlights'] -%}
                     <li>
                         <p>{{highlight}}</p>
                     </li>
-                    {% endfor %}
+                    {%- endfor %}
                 </ul>
             </div>
             {% endfor %}
@@ -176,7 +174,7 @@
             </h2>
         </header>
         <section id="education">
-            {% for edu in educations %}
+            {% for edu in educations -%}
             <section class="education-item">
                 <header>
                     <div class="header-left">
@@ -198,7 +196,7 @@
                 <!-- empty item for spacing -->
                 <div class="item"></div>
             </section>
-            {% endfor %}
+            {%- endfor %}
         </section>
     </section>
     <section class="section margin1">
@@ -206,18 +204,18 @@
             <h2 class="section-title">Interests</h2>
         </header>
         <section id="interests">
-            {% for interest in interests %}
+            {% for interest in interests -%}
             <div class="item">
                 <h3 class="name">
                     {{interest['name']}}
                 </h3>
                 <ul class="keywords">
-                    {% for kw in interest['keywords'] %}
+                    {% for kw in interest['keywords'] -%}
                     <li>{{kw}}</li>
-                    {% endfor %}
+                    {%- endfor %}
                 </ul>
             </div>
-            {% endfor %}
+            {%- endfor %}
         </section>
     </section>
 </div>

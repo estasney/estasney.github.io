@@ -5,7 +5,11 @@ basics:
   email: ''
   phone: ''
   url: https://www.linkedin.com/in/eric-stasney
-  summary: I enjoy working the full-stack of a data problem. I've had the opportunity to work with a large range of technologies from Data Science, Application Development and DevOps.
+  summary: "
+  Experienced Data Engineer with a demonstrated history of bootstrapping solutions for complex problems with limited resources.
+  5+ years experience with Python and popular packages such as Pandas, NumPy, spaCy, PyTorch, Scikit-Learn, SqlAlchemy, and Flask.
+  Proficient with Typescript, React, ES6 and Webpack.\n\n
+  I enjoy working with data and transforming it into something useful. I strive to create extensible, reusable code and applications."
   location:
     address: ''
     postalCode: NC 27529
@@ -13,194 +17,194 @@ basics:
     countryCode: US
     region: North Carolina
   profiles:
-  - network: GitHub
-    username: estasney
-    url: https://github.com/estasney
-    handle: estasney
-    icon: fab fa-github
-  - network: LinkedIn
-    username: ''
-    url: https://www.linkedin.com/in/eric-stasney
-    handle: eric-stasney
-    icon: fab fa-linkedin
-  - network: Kaggle
-    username: estasney
-    url: https://www.kaggle.com/estasney
-    handle: estasney
-    icon: fab fa-kaggle
+    - network: GitHub
+      username: estasney
+      url: https://github.com/estasney
+      handle: estasney
+      icon: fab fa-github
+    - network: LinkedIn
+      username: ''
+      url: https://www.linkedin.com/in/eric-stasney
+      handle: eric-stasney
+      icon: fab fa-linkedin
+    - network: Kaggle
+      username: estasney
+      url: https://www.kaggle.com/estasney
+      handle: estasney
+      icon: fab fa-kaggle
 work:
-- name: Cisco
-  location: Raleigh, NC (Remote)
-  description: Talent Hub
-  position: Full Stack Data Engineer
-  url: ''
-  startDate: Aug 2016
-  endDate: ''
-  summary: Talent Hub is a small team performing critical functions for Talent Acquisition
-    Operations
-  highlights:
-  - Increased team productivity by developing a Chrome Extension for detecting duplicated social profiles (react, webpack)
-  - Replaced manual data entry workflow by developing desktop application for web scraping social profiles (electron, es6)
-  - Develop API for team applications and deploy to AWS (flask, docker, docker-compose, mysql, nginx, ec2, ecr)
-  - Create extensible framework for integrating additional applications (docker-compose, nginx, bash)
-  - Design and run data pipeline to match candidates to open jobs (pandas, mysql)
-  - Develop NLP pipeline with domain specific language normalization and pattern detection (spacy)
-  - Develop and published a company name disambiguation Python package (networkx)
-  - Adapted, Optimized and Documented research paper MATLAB code that implements Hierarchical
-    NMF with Python for unsupervised clustering (numpy, scikit-learn)
-- name: US Army / COARNG
-  location: Denver, CO
-  description: Military Police
-  position: E4 (Specialist)
-  url: ''
-  startDate: Nov 2013
-  endDate: Nov 2016
-  summary: Enlisted in CO Army National Guard with the intent to serve my community,
-    part-time. My unit was activated and I served 18-months of Active Duty.
-- name: Seven Step RPO
-  location: Denver, CO
-  description: Talent Acquisition - Suntrust Bank
-  position: Recruiter
-  startDate: July 2013
-  endDate: Sept 2014
-  summary: Qualify candidates by conducting phone interviews to ensure technical
-    and cultural match to client needs
-- name: Edwards Student Housing & American Campus Communities
-  location: Eastern U.S.
-  description: Student Housing
-  position: Assistant General Manager
-  startDate: May 2011
-  endDate: May 2013
-  summary: Travelled between company properties to supervise and audit property operations
+  - name: Cisco
+    location: Raleigh, NC (Remote)
+    description: Talent Hub
+    position: Full Stack Data Engineer
+    url: ''
+    startDate: Aug 2016
+    endDate: ''
+    summary: Talent Hub is a small team performing critical functions for Talent Acquisition
+      Operations
+    highlights:
+      - Increased team productivity by developing a Chrome Extension for detecting duplicated social profiles (react, webpack)
+      - Replaced manual data entry workflow by developing desktop application for web scraping social profiles (electron, es6)
+      - Develop API for team applications and deploy to AWS (flask, docker, docker-compose, mysql, nginx, ec2, ecr)
+      - Create extensible framework for integrating additional applications (docker-compose, nginx, bash)
+      - Design and run data pipeline to match candidates to open jobs (pandas, mysql)
+      - Develop NLP pipeline with domain specific language normalization and pattern detection (spacy)
+      - Develop and published a company name disambiguation Python package (networkx)
+      - Adapted, Optimized and Documented research paper MATLAB code that implements Hierarchical
+        NMF with Python for unsupervised clustering (numpy, scikit-learn)
+  - name: US Army / COARNG
+    location: Denver, CO
+    description: Military Police
+    position: E4 (Specialist)
+    url: ''
+    startDate: Nov 2013
+    endDate: Nov 2016
+    summary: Enlisted in CO Army National Guard with the intent to serve my community,
+      part-time. My unit was activated and I served 18-months of Active Duty.
+  - name: Seven Step RPO
+    location: Denver, CO
+    description: Talent Acquisition - Suntrust Bank
+    position: Recruiter
+    startDate: July 2013
+    endDate: Sept 2014
+    summary: Qualify candidates by conducting phone interviews to ensure technical
+      and cultural match to client needs
+  - name: Edwards Student Housing & American Campus Communities
+    location: Eastern U.S.
+    description: Student Housing
+    position: Assistant General Manager
+    startDate: May 2011
+    endDate: May 2013
+    summary: Travelled between company properties to supervise and audit property operations
 education:
-- institution: The University of Tennessee
-  area: Biochemistry, Cellular and Molecular Biology
-  studyType: Bachelors
-  startDate: '2006'
-  endDate: '2011'
+  - institution: The University of Tennessee
+    area: Biochemistry, Cellular and Molecular Biology
+    studyType: Bachelors
+    startDate: '2006'
+    endDate: '2011'
 awards:
-- title: Peer To Peer Recognition
-  date: Multiple dates
-  awarder: Multiple Peers and Managers
-  summary: Recognition for contributions
-  highlights: []
+  - title: Peer To Peer Recognition
+    date: Multiple dates
+    awarder: Multiple Peers and Managers
+    summary: Recognition for contributions
+    highlights: [ ]
 skills:
-- name: Python
-  level: Master
-  keywords:
-  - Pandas
-  - NumPy
-  - Scipy
-  - Flask
-  - spaCy
-  - SQLAlchemy
-  - Pytest
-  - Cython
-  - Boto3
-  - Pytorch
-  - OpenCV
-- name: Data Science
-  level: Advanced
-  keywords:
-  - NLP
-  - Machine Learning
-  - Decompositions
-  - Statistics
-  - Visualization
-  - Data Engineering
-  - Business Intelligence
-- name: Application Development
-  level: Advanced
-  keywords:
-  - AWS
+  - name: Python
+    level: Master
+    keywords:
+      - Pandas
+      - NumPy
+      - Scipy
+      - Flask
+      - spaCy
+      - SQLAlchemy
+      - Pytest
+      - Cython
+      - Boto3
+      - Pytorch
+      - OpenCV
+  - name: Data Science
+    level: Advanced
+    keywords:
+      - NLP
+      - Machine Learning
+      - Decompositions
+      - Statistics
+      - Visualization
+      - Data Engineering
+      - Business Intelligence
+  - name: Application Development
+    level: Advanced
+    keywords:
+      - AWS
+      - Docker
+      - Docker Compose
+      - Flask
+      - Nginx
+      - React
+      - Webpack
+      - API Development
+      - Chrome Extension
+      - Electron
+skills_ul:
   - Docker
   - Docker Compose
-  - Flask
-  - Nginx
-  - React
-  - Webpack
-  - API Development
-  - Chrome Extension
-  - Electron
-skills_ul:
-- Docker
-- Docker Compose
-- MySQL
-- Jupyter Notebooks
-- Git
-- Database Schema Design
-- HTTP
-- Bash
-- Powershell
+  - MySQL
+  - Jupyter Notebooks
+  - Git
+  - Database Schema Design
+  - HTTP
+  - Bash
+  - Powershell
 interests:
-- name: IoT & Robotics
-  keywords:
-  - Raspberry Pi
-  - Arduino
-  - C
-- name: Electrical Engineering
-  keywords:
-  - Circuits
-  - Fritzing
+  - name: IoT & Robotics
+    keywords:
+      - Raspberry Pi
+      - Arduino
+      - C
+  - name: Electrical Engineering
+    keywords:
+      - Circuits
+      - Fritzing
 projects:
-- name: hNMF
-  description: Hierarchical non-negative matrix factorization
-  highlights:
-  - Adapted research paper MATLAB code to implement hNMF with Python
-  - Scikit-learn compatible
-  - Reduced run-time from hours to seconds
-  - Added several convenience methods for transforming matrices to interpretable latent factors
-  - Fully documented with Sphinx and published with documentation
-  keywords:
-  - NumPy
-  - Scipy
-  - Scikit-learn
-  - Matrix Decomposition
-  - Sphinx
-  startDate: Dec 2019
-  endDate: ''
-  url: https://github.com/estasney/hNMF
-  roles:
-  - Package Developer and Maintainer
-  entity: ''
-  type: Python Package
-- name: DupCheck
-  description: Application for alerting recruiters if a social profile is tracked in their ATS
-  highlights:
-    - React Chrome Extension with Authentication
-    - Containerized Flask API with Nginx reverse proxy
-    - Subsecond response times with 1 million records using AWS t3.micro instance
-    - Test suite with pytest and hypothesis
-  keywords:
-    - React
-    - Docker
-    - Docker Compose
-    - WAF
-    - AWS
-    - ECR
-    - EC2
-    - MySQL
-    - API Development
-- name: Talent Insights Mailer
-  description: Weekly mailer with insights for hiring leaders
-  highlights:
-    - Fully modular, extensible and customizable ETL pipeline
-    - Provides diversity, employer and skills analysis
-    - Embedded charts and wordclouds
-    - Automated generation and delivery of emails via .NET API
-  keywords:
-    - Business Insights
-    - Data Visualization
-    - Data Pipeline
-    - Email
-    - Matplotlib
-    - Pywin32
-- name: Web Scraper
-  description: Web scraper for internal team use
-  highlights:
-    - 'Scraper exists of two main components : Electron Desktop Application and Web Application'
-    - Controls puppeteer browser that intercepts and parses pattern-matched JSON
-    - Compatible with SPA sites
-    - Track extractions and prevents usage over a limit set by an administrator
-    - Parses raw strings into structured data. Transforms data into spreadsheet form
-      compatible with internal ATS.
+  - name: hNMF
+    description: Hierarchical non-negative matrix factorization
+    highlights:
+      - Adapted research paper MATLAB code to implement hNMF with Python
+      - Scikit-learn compatible
+      - Reduced run-time from hours to seconds
+      - Added several convenience methods for transforming matrices to interpretable latent factors
+      - Fully documented with Sphinx and published with documentation
+    keywords:
+      - NumPy
+      - Scipy
+      - Scikit-learn
+      - Matrix Decomposition
+      - Sphinx
+    startDate: Dec 2019
+    endDate: ''
+    url: https://github.com/estasney/hNMF
+    roles:
+      - Package Developer and Maintainer
+    entity: ''
+    type: Python Package
+  - name: DupCheck
+    description: Application for alerting recruiters if a social profile is tracked in their ATS
+    highlights:
+      - React Chrome Extension with Authentication
+      - Containerized Flask API with Nginx reverse proxy
+      - Subsecond response times with 1 million records using AWS t3.micro instance
+      - Test suite with pytest and hypothesis
+    keywords:
+      - React
+      - Docker
+      - Docker Compose
+      - WAF
+      - AWS
+      - ECR
+      - EC2
+      - MySQL
+      - API Development
+  - name: Talent Insights Mailer
+    description: Weekly mailer with insights for hiring leaders
+    highlights:
+      - Fully modular, extensible and customizable ETL pipeline
+      - Provides diversity, employer and skills analysis
+      - Embedded charts and wordclouds
+      - Automated generation and delivery of emails via .NET API
+    keywords:
+      - Business Insights
+      - Data Visualization
+      - Data Pipeline
+      - Email
+      - Matplotlib
+      - Pywin32
+  - name: Web Scraper
+    description: Web scraper for internal team use
+    highlights:
+      - 'Scraper exists of two main components : Electron Desktop Application and Web Application'
+      - Controls puppeteer browser that intercepts and parses pattern-matched JSON
+      - Compatible with SPA sites
+      - Track extractions and prevents usage over a limit set by an administrator
+      - Parses raw strings into structured data. Transforms data into spreadsheet form
+        compatible with internal ATS.
