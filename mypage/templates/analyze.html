@@ -15,7 +15,7 @@ contacts.forEach((x) => {
       const targetElement = document.querySelector(`#${x.id}`);
       targetElement.addEventListener("click", (e) => {
           e.preventDefault();
-          gtag('event', 'click', {
+          window.ga('event', 'click', {
                'event_category': 'link',
                'event_label': x.id,
                'value': 1
@@ -28,7 +28,7 @@ projects.forEach((x) => {
     const targetElement = document.querySelector(`#${x.id}`);
     targetElement.addEventListener("click", (e) => {
         e.preventDefault();
-        gtag('event', 'click', {
+        window.ga('event', 'click', {
              'event_category': 'project',
              'event_label': x.id,
              'value': 1
