@@ -22,6 +22,11 @@ basics:
       url: https://github.com/estasney
       handle: estasney
       icon: fab fa-github
+    - network: Technical Blog
+      username: MyNotes
+      url: https://estasney.github.io/MyNotes/
+      handle: MyNotes
+      icon: fab fa-github
     - network: LinkedIn
       username: ''
       url: https://www.linkedin.com/in/eric-stasney
