@@ -1,0 +1,94 @@
+{% set location = basics['location'] %}
+{% set profiles = basics['profiles'] %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ basics['name'] }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/simple-style.css">
+  <link rel="shortcut icon" href="styles/favicon.ico" type="image/x-icon">
+
+</head>
+<div id="resume">
+  <div id="name-container" class="text-center">
+    <h1 class="uppercase">{{ basics['name'] }}</h1>
+  </div>
+  <div id="contact-container" class="text-center items">
+    {% if contact_info is defined and contact_info is not none and contact_info|length > 0 -%}
+      {%- for contact in contact_info -%}
+        <span>{{ contact }}</span>
+      {%- endfor -%}
+    {%- endif %}
+    <span>{{ location['city'] }}, {{ location['postalCode'] }}</span>
+    <span><a href="https://www.github.com/estasney">github.com/estasney</a></span>
+  </div>
+  <div id="label-container" class="text-center">
+    <h2 class="uppercase bottomline">{{ basics['label'] }}</h2>
+  </div>
+  <div id="highlight-container" class="text-center">
+    <div class="highlight-items">
+      {% for highlight in highlights -%}
+        <span>{{ highlight }}</span>
+      {%- endfor %}
+    </div>
+  </div>
+
+  <div class="bottomline uppercase section-header">
+    <h3>Work Experience</h3>
+  </div>
+  <div class="work-experience">
+    {% for job in work -%}
+      {% if job['endDate'] == "" -%}
+        {%- set endDate = " to Present" -%}
+      {%- else %}
+        {%- set endDate = " to {}".format(job['endDate']) -%}
+      {%- endif %}
+      <div class="work-experience-item">
+        <div class="flex full-line bold">
+          <div class="company">{{ job['name'] }}, {{ job['location'] }}</div>
+          <div class="startDate">{{ job['startDate'] }} {{ endDate }}</div>
+        </div>
+        <div class="position-title bold">{{ job['position'] }}</div>
+        {% if job['summary'] is not none -%}
+          <div class="position-summary italicize">
+            {{ job['summary'] }}
+          </div>
+        {%- endif %}
+        <ul class="highlights">
+          {% for highlight in job['highlights'] -%}
+            <li>
+              <p>{{ highlight }}</p>
+            </li>
+          {%- endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="bottomline uppercase section-header">
+    <h4>Education</h4>
+  </div>
+  <div id="education-container" class="education">
+    {% for edu in educations -%}
+      <div class="education-item">
+        <div class="flex full-line bold">
+          <div class="institution">{{ edu['institution'] }}</div>
+          <div class="startDate">{{ edu['startDate'] }} to {{ edu['endDate'] }}</div>
+        </div>
+        <div class="bold">{{ edu['studyType'] }} - {{ edu['area'] }}</div>
+      </div>
+    {%- endfor %}
+  </div>
+<div class="bottomline uppercase section-header">
+  <h4>Technologies</h4>
+</div>
+<div id="technology-container" class="text-center">
+    <div class="technology-items">
+      {% for tech in technologies -%}
+        <span>{{ tech }}</span>
+      {%- endfor %}
+    </div>
+  </div>
+</div>
+
+</html>

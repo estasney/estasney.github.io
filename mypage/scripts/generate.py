@@ -3,6 +3,7 @@ import yaml
 import os
 import argparse
 import dotenv
+import click
 
 
 def flatten(coll):
@@ -24,6 +25,7 @@ def get_data(fp):
     with open(fp, 'r') as fp:
         return yaml.load(fp, Loader=yaml.FullLoader)
 
+
 def get_contact_info():
     """
     Prompt for contact info I want to leave out of VCS
@@ -39,33 +41,33 @@ def get_contact_info():
             return contacts
 
 
-env = Environment(
-        loader=PackageLoader('mypage', 'templates'),
-        autoescape=select_autoescape(['html'])
-        )
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Generate Resume')
-    parser.add_argument('--contacts', help='Manually Enter Contact Information', action="store_true")
-    args = parser.parse_args()
-
-    if args.contacts:
-        contact_info = get_contact_info()
-    else:
-        contact_info = None
+@click.command()
+@click.option("-c", "--contacts", type=bool, default=False, help="Manually Enter Contact Information")
+@click.option("-t", "--template", type=click.Choice(["stx", "simple"]), default="stx", help="Select Template")
+def generate(contacts, template):
     dotenv.load_dotenv()
-    template = env.get_template("so_template.html")
-    data_path = os.path.join("..", "data", "me.yml")
+    env = Environment(
+            loader=PackageLoader('mypage', 'templates'),
+            autoescape=select_autoescape(['html'])
+            )
+
+    contact_info = get_contact_info() if contacts else None
+    template = env.get_template(f"{template}.html")
+    data_path = os.path.join(os.pardir, "data", "me.yml")
     data = get_data(data_path)
     skills, skills_ul = data['skills'], data['skills_ul']
     skills_ul = remove_duplicate_skills(skills, skills_ul)
     output = template.render(basics=data['basics'], skills=skills, skills_ul=skills_ul, work=data['work'],
                              educations=data['education'], projects=data['projects'],
-                             interests=data['interests'], contact_info=contact_info, env=os.environ)
+                             interests=data['interests'], contact_info=contact_info,
+                             highlights=data['highlights'], technologies=data['technologies'],
+                             env=os.environ)
 
-    if args.contacts:
-        page_out = os.path.join("..", "..", "index-contact.html")
-    else:
-        page_out = os.path.join("..", "..", "index.html")
-    with open(page_out, "w+") as html_file:
+    file_name = "index-contact.html" if contacts else "index.html"
+    file_path = os.path.join(os.pardir, os.pardir, file_name)
+    with open(file_path, "w+", encoding="utf-8") as html_file:
         html_file.write(output)
+
+
+if __name__ == '__main__':
+    generate()
