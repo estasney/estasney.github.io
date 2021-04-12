@@ -43,6 +43,22 @@
     margin: 0 0 -1rem 0;
 }
 
+#contact-container > span::after {
+    content: "\2002|";
+}
+
+#contact-container > span::before {
+    content: "\2002";
+}
+
+#contact-container > span:first-child::before {
+    content: unset;
+}
+
+#contact-container > span:last-child::after {
+    content: unset;
+}
+
 #label-container {
     margin: 0 0 -1rem 0;
 }
