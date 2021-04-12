@@ -146,19 +146,22 @@ technologies:
   - Pandas
   - Jupyter
   - Flask
-  - Nginx
-  - uWGSI
   - pytest
-  - Regex
-  - Cython
-  - React
-  - ES6
-  - Webpack
-  - Electron
-  - D3.js
   - scikit-learn
   - PyTorch
   - spaCy
+  - Cython
+  - uWSGI
+  - Nginx
+  - Regex
+  - React
+  - JavaScript (ES6)
+  - HTML
+  - CSS
+  - SCSS
+  - Webpack
+  - Electron
+  - D3.js
   - MySQL
   - AWS
   - Docker
