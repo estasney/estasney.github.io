@@ -121,7 +121,7 @@
                 </header>
                 <div class="item" id="work-item">
                     <div class="summary">
-                        {{job['summary']}}
+                        {{job['summary'] if job['summary'] is not none else ''}}
                     </div>
                     <ul class="highlights">
                         {% for highlight in job['highlights'] -%}
