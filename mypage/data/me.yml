@@ -33,25 +33,24 @@ basics:
       handle: estasney
       icon: fab fa-kaggle
 work:
-  - name: Cisco
+  - name: Cisco Systems
     location: Raleigh, NC (Remote)
     description: Talent Hub
-    position: Full Stack Data Engineer
+    position: Data Engineer
     url: ''
     startDate: Aug 2016
     endDate: ''
-    summary: Talent Hub is a small team performing critical functions for Talent Acquisition
-      Operations
+    summary: Talent Acquisition Operations
     highlights:
-      - Increased team productivity by developing a Chrome Extension for detecting duplicated social profiles (react, webpack)
-      - Replaced manual data entry workflow by developing desktop application for web scraping social profiles (electron, es6)
-      - Develop API for team applications and deploy to AWS (flask, docker, docker-compose, mysql, nginx, ec2, ecr)
-      - Create extensible framework for integrating additional applications (docker-compose, nginx, bash)
-      - Design and run data pipeline to match candidates to open jobs (pandas, mysql)
-      - Develop NLP pipeline with domain specific language normalization and pattern detection (spacy)
-      - Develop and published a company name disambiguation Python package (networkx)
-      - Adapted, Optimized and Documented research paper MATLAB code that implements Hierarchical
-        NMF with Python for unsupervised clustering (numpy, scikit-learn)
+      - Developed Chrome Extension and Flask Application to notify users of social profiles tracked in internal ATS.
+        Achieved ~150 ms response times with 1 million records.
+      - Replaced manual data entry process by developing Electron application for parsing social profiles and transforming them into standard data model.
+        To date, has handled 200,000 extractions.
+      - Create extensible framework for deploying applications with Docker. Currently hosting three applications on single t3.micro instance with minimal cloud spend.
+      - Design and run data pipeline to match candidates to open jobs. Replaced manual search process with scalable and automated process.
+      - Built internal NLP pipeline with domain specific language normalization and pattern detection for job description and candidate profiles.
+      - Develop and publish a company name disambiguation Python package. This greatly improved company attribution for talent flow reporting.
+      - Adapted and Optimized MATLAB code for Hierarchical NMF into Python package. Leveraged to provide unsupervised clustering for talent segments where traditional approaches failed.
   - name: US Army / COARNG
     location: Denver, CO
     description: Military Police
@@ -59,23 +58,29 @@ work:
     url: ''
     startDate: Nov 2013
     endDate: Nov 2016
-    summary: Enlisted in CO Army National Guard with the intent to serve my community,
-      part-time. My unit was activated and I served 18-months of Active Duty.
+    summary:
+    highlights:
+      - Military Police (31B)
+      - 18 Months Active Duty Deployment
   - name: Seven Step RPO
     location: Denver, CO
     description: Talent Acquisition - Suntrust Bank
     position: Recruiter
     startDate: July 2013
     endDate: Sept 2014
-    summary: Qualify candidates by conducting phone interviews to ensure technical
-      and cultural match to client needs
+    summary:
+    highlights:
+      - Qualify candidates by conducting phone interviews to ensure technical
+        and cultural match to client needs
   - name: Edwards Student Housing & American Campus Communities
     location: Eastern U.S.
     description: Student Housing
     position: Assistant General Manager
     startDate: May 2011
     endDate: May 2013
-    summary: Travelled between company properties to supervise and audit property operations
+    summary:
+    highlights:
+      - Travelled between company properties to supervise and audit property operations
 education:
   - institution: The University of Tennessee
     area: Biochemistry, Cellular and Molecular Biology
@@ -130,6 +135,41 @@ skills_ul:
   - HTTP
   - Bash
   - Powershell
+technologies:
+  - Python
+  - NumPy
+  - Pandas
+  - Jupyter
+  - Flask
+  - Nginx
+  - uWGSI
+  - pytest
+  - Regex
+  - Cython
+  - React
+  - ES6
+  - Webpack
+  - Electron
+  - D3.js
+  - scikit-learn
+  - PyTorch
+  - spaCy
+  - MySQL
+  - AWS
+  - Docker
+  - Dockerfiles
+  - Docker Compose
+highlights:
+  - Python
+  - Data Science
+  - Data Pipelines
+  - Database Design
+  - DevOps
+  - AWS
+  - Application Development
+  - Machine Learning
+  - Docker
+  - Bash Scripting
 interests:
   - name: IoT & Robotics
     keywords:
