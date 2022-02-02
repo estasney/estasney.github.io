@@ -6,10 +6,10 @@ basics:
   phone: ''
   url: https://www.linkedin.com/in/eric-stasney
   summary: "
-  Experienced Data Engineer with a demonstrated history of bootstrapping solutions for complex problems with limited resources.
-  5+ years experience with Python and popular packages such as Pandas, NumPy, spaCy, PyTorch, Scikit-Learn, SqlAlchemy, and Flask.
-  Proficient with Typescript, React, ES6 and Webpack.\n\n
-  I enjoy working with data and transforming it into something useful. I strive to create extensible, reusable code and applications."
+  Experienced Data Engineer and Developer with a demonstrated history of bootstrapping solutions for complex problems with limited resources.
+  6+ years experience Data Engineering with Python and related packages such as Pandas, dask and numpy. 
+  4+ years experience Full Stack web development, developing containerized Python uWSGI backends with Flask and serving SPA front-ends with React and Typescript. 
+  I enjoy working with data, transforming it into something useful and presenting it. I strive to create extensible, reusable code and applications."
   location:
     address: ''
     postalCode: NC 27529
@@ -45,13 +45,15 @@ work:
     url: ''
     startDate: Aug 2016
     endDate: ''
-    summary: Talent Acquisition Operations
+    summary: Talent Acquisition Operational Support
     highlights:
+      - Developed url shortener web application with click-through performance dashboards for link owners.
+      - Driving initiative to design a career skills ontology to support graph-based vectorization and distance measures of jobs and candidates.
       - Developed Chrome Extension and Flask Application to notify users of social profiles tracked in internal ATS.
-        Achieved ~150 ms response times with 1 million records.
+        Achieved ~50 ms response times with 1 million records.
       - Replaced manual data entry process by developing Electron application for parsing social profiles and transforming them into standard data model.
         To date, has handled 200,000 extractions.
-      - Create extensible framework for deploying applications with Docker. Currently hosting three applications on single t3.micro instance with minimal cloud spend.
+      - Create extensible framework for deploying applications with Docker. Currently hosting five applications on single t3.micro instance with minimal cloud spend.
       - Design and run data pipeline to match candidates to open jobs. Replaced manual search process with scalable and automated process.
       - Built internal NLP pipeline with domain specific language normalization and pattern detection for job description and candidate profiles.
       - Develop and publish a company name disambiguation Python package. This greatly improved company attribution for talent flow reporting.
@@ -98,48 +100,45 @@ skills:
     keywords:
       - Pandas
       - NumPy
-      - Scipy
       - Flask
+      - Marshallow
       - spaCy
       - SQLAlchemy
       - Pytest
-      - Cython
       - Boto3
-      - Pytorch
-      - OpenCV
+      - Prefect
   - name: Data Science
     level: Advanced
     keywords:
       - NLP
-      - Machine Learning
+      - Transformers
       - Decompositions
       - Statistics
-      - Visualization
-      - Data Engineering
       - Business Intelligence
   - name: Application Development
     level: Advanced
     keywords:
       - AWS
+      - Linux
       - Docker
-      - Docker Compose
-      - Flask
       - Nginx
       - React
+      - Typescript
       - Webpack
-      - API Development
-      - Chrome Extension
       - Electron
 skills_ul:
   - Docker
-  - Docker Compose
   - MySQL
+  - Postgres
   - Jupyter Notebooks
   - Git
   - Database Schema Design
   - HTTP
   - Bash
-  - Powershell
+  - make
+  - SCSS
+  - D3.js
+
 technologies:
   - Python
   - NumPy
@@ -169,9 +168,10 @@ technologies:
   - Docker Compose
 highlights:
   - Python
+  - Unit Testing
   - Data Science
   - Data Pipelines
-  - Database Design
+  - Schema Design
   - DevOps
   - AWS
   - Application Development
@@ -183,11 +183,12 @@ interests:
     keywords:
       - Raspberry Pi
       - Arduino
-      - C
+      - ESP32
+      - C++
   - name: Electrical Engineering
     keywords:
-      - Circuits
-      - Fritzing
+      - PCB Design
+      - Eagle
 projects:
   - name: hNMF
     description: Hierarchical non-negative matrix factorization
@@ -227,20 +228,16 @@ projects:
       - EC2
       - MySQL
       - API Development
-  - name: Talent Insights Mailer
-    description: Weekly mailer with insights for hiring leaders
+  - name: LinkLab
+    description: URL Shortener Service
     highlights:
-      - Fully modular, extensible and customizable ETL pipeline
-      - Provides diversity, employer and skills analysis
-      - Embedded charts and wordclouds
-      - Automated generation and delivery of emails via .NET API
+      - Designed Swagger API and implemented with Flask
+      - React SPA Front-end
+      - Provides powerful reporting capabilities for both links and campaigns
+      - Embedded dashboards and charts
     keywords:
       - Business Insights
       - Data Visualization
-      - Data Pipeline
-      - Email
-      - Matplotlib
-      - Pywin32
   - name: Web Scraper
     description: Web scraper for internal team use
     highlights:
