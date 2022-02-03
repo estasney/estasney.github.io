@@ -47,17 +47,16 @@ work:
     endDate: ''
     summary: Talent Acquisition Operational Support
     highlights:
-      - Developed url shortener web application with click-through performance dashboards for link owners.
-      - Driving initiative to design a career skills ontology to support graph-based vectorization and distance measures of jobs and candidates.
-      - Developed Chrome Extension and Flask Application to notify users of social profiles tracked in internal ATS.
+      - Develop Url Shortener Web Application with click-through performance Reporting Dashboards for link owners.
+      - Replace manual data entry process for recruiters by developing Electron Application for Parsing social profiles and Transforming them into standard Data Model expected by ATS.
+      - Driving initiative to design a Skills Ontology to support graph-based Vectorization and Distance Measures of jobs and candidates.
+      - Develop Web Application and Browser Extension to notify users of social profiles tracked in internal ATS.
         Achieved ~50 ms response times with 1 million records.
-      - Replaced manual data entry process by developing Electron application for parsing social profiles and transforming them into standard data model.
-        To date, has handled 200,000 extractions.
-      - Create extensible framework for deploying applications with Docker. Currently hosting five applications on single t3.micro instance with minimal cloud spend.
-      - Design and run data pipeline to match candidates to open jobs. Replaced manual search process with scalable and automated process.
-      - Built internal NLP pipeline with domain specific language normalization and pattern detection for job description and candidate profiles.
-      - Develop and publish a company name disambiguation Python package. This greatly improved company attribution for talent flow reporting.
-      - Adapted and Optimized MATLAB code for Hierarchical NMF into Python package. Leveraged to provide unsupervised clustering for talent segments where traditional approaches failed.
+      - Create Extensible Framework for Deploying Applications with Docker.
+      - Design and run Data Pipeline modeled as DAG to match candidates to open jobs. Replaced manual search process with scalable and automated process.
+      - Built internal NLP Pipeline with domain specific Language Normalization and Pattern Detection for job description and candidate profiles.
+      - Develop a company name disambiguation Python Package, allowing accurate reporting of talent flow and attrition.
+      - Adapted and Optimized MATLAB code for Hierarchical NMF into Python Package. Leveraged to provide Unsupervised Clustering for Talent Segmentation.
   - name: US Army / COARNG
     location: Denver, CO
     description: Military Police
@@ -168,7 +167,7 @@ technologies:
   - Docker Compose
 highlights:
   - Python
-  - Unit Testing
+  - TDD
   - Data Science
   - Data Pipelines
   - Schema Design
@@ -177,7 +176,7 @@ highlights:
   - Application Development
   - Machine Learning
   - Docker
-  - Bash Scripting
+  - Linux
 interests:
   - name: IoT & Robotics
     keywords:
