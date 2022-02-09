@@ -52,7 +52,7 @@ work:
       - Driving initiative to design a Skills Ontology to support graph-based Vectorization and Distance Measures of jobs and candidates.
       - Develop Web Application and Browser Extension to notify users of social profiles tracked in internal ATS.
         Achieved ~50 ms response times with 1 million records.
-      - Create Extensible Framework for Deploying Applications with Docker.
+      - Develop Containerized Software Applications with Docker. Deploy to AWS using CloudFormation.
       - Design and run Data Pipeline modeled as DAG to match candidates to open jobs. Replaced manual search process with scalable and automated process.
       - Built internal NLP Pipeline with domain specific Language Normalization and Pattern Detection for job description and candidate profiles.
       - Develop a company name disambiguation Python Package, allowing accurate reporting of talent flow and attrition.
