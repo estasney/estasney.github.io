@@ -7,7 +7,7 @@ basics:
   url: https://www.linkedin.com/in/eric-stasney
   summary: "
   Experienced Data Engineer and Developer with a demonstrated history of bootstrapping solutions for complex problems with limited resources.
-  6+ years experience Data Engineering with Python and related packages such as Pandas, dask and numpy. 
+  6+ years experience Data Engineering with Python and related tools such as Pandas, dask and numpy. 
   4+ years experience Full Stack web development, developing containerized Python uWSGI backends with Flask and serving SPA front-ends with React and Typescript. 
   I enjoy working with data, transforming it into something useful and presenting it. I strive to create extensible, reusable code and applications."
   location:
@@ -189,6 +189,22 @@ interests:
       - PCB Design
       - Eagle
 projects:
+  - name: MindRef
+    description: Cross-platform note taking application
+    highlights:
+      - Kivy based application for displaying and managing Markdown notes
+      - Factory pattern provides high-level abstraction of platform specific functionality
+      - Implemented custom layouts and widgets for displaying Markdown
+      - Written primarily in Python with Java utility classes for Android support
+    keywords:
+      - Kivy
+      - GUI
+      - Android
+      - GLSL
+    startDate: May 2022
+    endDate: ''
+    url: https://github.com/estasney/MindRef
+    type: Application
   - name: hNMF
     description: Hierarchical non-negative matrix factorization
     highlights:
