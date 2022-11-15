@@ -6,9 +6,9 @@ basics:
   phone: ''
   url: https://www.linkedin.com/in/eric-stasney
   summary: "
-  Experienced Data Engineer and Developer with a demonstrated history of bootstrapping solutions for complex problems with limited resources.
-  6+ years experience Data Engineering with Python and related tools such as Pandas, dask and numpy. 
-  4+ years experience Full Stack web development, developing containerized Python uWSGI backends with Flask and serving SPA front-ends with React and Typescript. 
+  Experienced Developer with a demonstrated history of bootstrapping solutions for complex problems with limited resources.
+  6+ years experience with Python scientific and data toolkits such as Pandas, NumPy and Pydantic. 
+  4+ years experience Full Stack Web Development, developing containerized uWSGI backends with Flask and FastAPI and SPA frontends with React/Typescript. 
   I enjoy working with data, transforming it into something useful and presenting it. I strive to create extensible, reusable code and applications."
   location:
     address: ''
@@ -41,18 +41,19 @@ work:
   - name: Cisco Systems
     location: Raleigh, NC (Remote)
     description: Talent Hub
-    position: Data Engineer
+    position: Software Engineer
     url: ''
     startDate: Aug 2016
     endDate: ''
     summary: Talent Acquisition Operational Support
     highlights:
-      - Develop Url Shortener Web Application with click-through performance Reporting Dashboards for link owners.
-      - Replace manual data entry process for recruiters by developing Electron Application for Parsing social profiles and Transforming them into standard Data Model expected by ATS.
+      - Develop Url Shortener Web Application with click-through performance metrics visualized with Dashboards for link owners.
+      - Develop Electron Desktop Application, with containerized Flask backend  for Web Scraping social profiles. Over 200,000 profiles transformed  into structured data and imported into internal ATS.
       - Driving initiative to design a Skills Ontology to support graph-based Vectorization and Distance Measures of jobs and candidates.
       - Develop Web Application and Browser Extension to notify users of social profiles tracked in internal ATS.
-        Achieved ~50 ms response times with 1 million records.
+        Achieved ~50 ms response times while querying 1 million records.
       - Develop Containerized Software Applications with Docker. Deploy to AWS using CloudFormation.
+      - Write and Deploy AWS Lambda functions for Serverless microservices.
       - Design and run Data Pipeline modeled as DAG to match candidates to open jobs. Replaced manual search process with scalable and automated process.
       - Built internal NLP Pipeline with domain specific Language Normalization and Pattern Detection for job description and candidate profiles.
       - Develop a company name disambiguation Python Package, allowing accurate reporting of talent flow and attrition.
@@ -100,11 +101,10 @@ skills:
       - Pandas
       - NumPy
       - Flask
-      - Marshallow
+      - Pydantic
       - spaCy
       - SQLAlchemy
       - Pytest
-      - Boto3
       - Prefect
   - name: Data Science
     level: Advanced
@@ -131,12 +131,13 @@ skills_ul:
   - Postgres
   - Jupyter Notebooks
   - Git
-  - Database Schema Design
+  - Schema Design
+  - API Design
   - HTTP
   - Bash
   - make
   - SCSS
-  - D3.js
+  - D3
 
 technologies:
   - Python
@@ -153,7 +154,7 @@ technologies:
   - Nginx
   - Regex
   - React
-  - JavaScript (ES6)
+  - Typescript
   - HTML
   - CSS
   - SCSS
@@ -180,7 +181,6 @@ highlights:
 interests:
   - name: IoT & Robotics
     keywords:
-      - Raspberry Pi
       - Arduino
       - ESP32
       - C++
@@ -195,18 +195,19 @@ projects:
       - Kivy based application for displaying and managing Markdown notes
       - Factory pattern provides high-level abstraction of platform specific functionality
       - Implemented custom layouts and widgets for displaying Markdown
-      - Written primarily in Python with Java utility classes for Android support
+      - Written primarily in Python with Java utility classes for Android
     keywords:
       - Kivy
       - GUI
       - Android
       - GLSL
+      - Java
     startDate: May 2022
     endDate: ''
     url: https://github.com/estasney/MindRef
     type: Application
   - name: hNMF
-    description: Hierarchical non-negative matrix factorization
+    description: Hierarchical Non-Negative Matrix Factorization
     highlights:
       - Adapted research paper MATLAB code to implement hNMF with Python
       - Scikit-learn compatible
@@ -257,8 +258,7 @@ projects:
     description: Web scraper for internal team use
     highlights:
       - 'Scraper exists of two main components : Electron Desktop Application and Web Application'
-      - Controls puppeteer browser that intercepts and parses pattern-matched JSON
+      - Controls Chromium intercepts network requests and parses pattern-matched JSON
       - Compatible with SPA sites
-      - Track extractions and prevents usage over a limit set by an administrator
       - Parses raw strings into structured data. Transforms data into spreadsheet form
         compatible with internal ATS.
