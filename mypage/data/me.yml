@@ -40,23 +40,50 @@ basics:
 work:
   - name: Cisco Systems
     location: Raleigh, NC (Remote)
+    description: Customer Lifecycle Operations
+    position: Data Architect
+    url: ''
+    startDate: Nov 2025
+    endDate: Present
+    summary: Customer Lifecycle Operations
+    highlights:
+      -
+  - name: Cisco Systems
+    location: Raleigh, NC (Remote)
+    description: Customer Lifecycle Operations
+    position: Data Scientist
+    url: ''
+    startDate: Jan 2023
+    endDate: Nov 2025
+    summary: Customer Lifecycle Operations - Data Canvas
+    highlights:
+      - Lead Developer for Data Canvas, an enterprise asset management platform for Customer Lifecycle Operations.
+      - Took ownership of production React application experiecing serious state management issues and data inconsistencies and delivered complete rewrite in one week. Led TypeScript migration, strengthing type safety and API contracts.
+      - Built service-oriented FastAPI backend coordinating complex workflow dispatch and background processing; established contract-first development with OpenAPI specifications.
+      - Implemented Pydantic and Zod schemas for robust data validation allowing parallel frontend and backend development. This allowed for faster, parallel development between frontend and backend teams and eliminated runtime data errors in production.
+      - Centralized authorization and authentication in both frontend and backend using SSO, JWT, and RBAC.
+      - Engineered self-service spreadsheet upload supporting 40+ formats via declarative JSON configuration, automated column mapping, and web worker optimization.
+      - Designed and implemented event-driven notification system allowing background tasks to display rich progress and output to users through typed payloads and dynamic UI components.
+      - Consolidated common logic from 40 disparate repositories handling various backend tasks into single reusable Python package, reducing code duplication and maintenance overhead. Replaced per-repository Docker builds with centralized multi-stage Docker build process; reduced image size by 90% and build times by 75%.
+  - name: Cisco Systems
+    location: Raleigh, NC (Remote)
     description: Talent Hub
     position: Software Engineer
     url: ''
     startDate: Aug 2016
-    endDate: ''
+    endDate: Jan 2023
     summary: Talent Acquisition Operational Support
     highlights:
-      - Develop Url Shortener Web Application with click-through performance metrics visualized with Dashboards for link owners.
-      - Develop Electron Desktop Application, with containerized Flask backend  for Web Scraping social profiles. Over 200,000 profiles transformed  into structured data and imported into internal ATS.
-      - Driving initiative to design a Skills Ontology to support graph-based Vectorization and Distance Measures of jobs and candidates.
-      - Develop Web Application and Browser Extension to notify users of social profiles tracked in internal ATS.
+      - Developed Url Shortener Web Application with click-through performance metrics visualized with Dashboards for link owners.
+      - Developed Electron Desktop Application, with containerized Flask backend  for Web Scraping social profiles. Over 200,000 profiles transformed  into structured data and imported into internal ATS.
+      - Drove initiative to design a Skills Ontology to support graph-based Vectorization and Distance Measures of jobs and candidates.
+      - Developed Web Application and Browser Extension to notify users of social profiles tracked in internal ATS.
         Achieved ~50 ms response times while querying 1 million records.
-      - Develop Containerized Software Applications with Docker. Deploy to AWS using CloudFormation.
-      - Write and Deploy AWS Lambda functions for Serverless microservices.
-      - Design and run Data Pipeline modeled as DAG to match candidates to open jobs. Replaced manual search process with scalable and automated process.
+      - Developed Containerized Software Applications with Docker. Deployed to AWS using CloudFormation.
+      - Wrote and Deployed AWS Lambda functions for Serverless microservices.
+      - Designed and ran Data Pipeline modeled as DAG to match candidates to open jobs. Replaced manual search process with scalable and automated process.
       - Built internal NLP Pipeline with domain specific Language Normalization and Pattern Detection for job description and candidate profiles.
-      - Develop a company name disambiguation Python Package, allowing accurate reporting of talent flow and attrition.
+      - Developed a company name disambiguation Python Package, allowing accurate reporting of talent flow and attrition.
       - Adapted and Optimized MATLAB code for Hierarchical NMF into Python Package. Leveraged to provide Unsupervised Clustering for Talent Segmentation.
   - name: US Army / COARNG
     location: Denver, CO
