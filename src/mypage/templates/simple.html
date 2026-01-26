@@ -6,8 +6,8 @@
   <meta charset="utf-8">
   <title>{{ basics['name'] }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles/simple-style.css">
-  <link rel="shortcut icon" href="styles/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="src/mypage/styles/simple-style.css">
+  <link rel="shortcut icon" href="mypage/styles/favicon.ico" type="image/x-icon">
 </head>
 <div id="resume">
   <div id="name-container" class="text-center">
@@ -38,15 +38,15 @@
   </div>
   <div class="work-experience">
     {% for job in work -%}
-      {% if job['endDate'] == "" -%}
+      {% if job['endDate'] is none or job['endDate'] == "" -%}
         {%- set endDate = " to Present" -%}
       {%- else %}
-        {%- set endDate = " to {}".format(job['endDate']) -%}
+        {%- set endDate = " to {}".format(job['endDate'] | format_date) -%}
       {%- endif %}
       <div class="work-experience-item">
         <div class="flex full-line bold">
           <div class="company">{{ job['name'] }}, {{ job['location'] }}</div>
-          <div class="startDate">{{ job['startDate'] }} {{ endDate }}</div>
+          <div class="startDate">{{ job['startDate'] | format_date }} {{ endDate }}</div>
         </div>
         <div class="position-title bold">{{ job['position'] }}</div>
         {% if job['summary'] is not none -%}
@@ -71,10 +71,10 @@
     {% for edu in educations -%}
       <div class="education-item">
         <div class="flex full-line bold">
-          <div class="institution">{{ edu['institution'] }}</div>
-          <div class="startDate">{{ edu['startDate'] }} to {{ edu['endDate'] }}</div>
+          <div class="institution">{{ edu.institution }}</div>
+          <div class="startDate">{{ edu.start_date | format_date }} to {{ edu.end_date | format_date }}</div>
         </div>
-        <div class="bold">{{ edu['studyType'] }} - {{ edu['area'] }}</div>
+        <div class="bold">{{ edu.study_type }} - {{ edu.area }}</div>
       </div>
     {%- endfor %}
   </div>

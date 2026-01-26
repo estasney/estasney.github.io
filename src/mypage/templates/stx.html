@@ -1,19 +1,12 @@
-{% set location = basics['location'] -%}
-{% set profiles = basics['profiles'] -%}
-{% from "analyze.html" import makeSetupJs -%}
+{%- set location = basics.location -%}
+{%- set profiles = basics.profiles -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', '{{ env['GA_CODE'] }}', 'auto');
-  ga('send', 'pageview');
-  </script>
-  <script async src='https://www.google-analytics.com/analytics.js'></script>
     <meta charset="utf-8">
-    <title>{{basics['name']}}</title>
+    <title>{{basics.name}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles/style.4.css">
+    <link rel="stylesheet" type="text/css" href="src/mypage/styles/style.4.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet"
           type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
@@ -30,21 +23,21 @@
 <div id="resume">
     <header id="header" class="clear">
         <div>
-            <h1 class="name">{{basics['name']}}</h1>
-            <h2 class="label">{{basics['label']}}</h2>
+            <h1 class="name">{{basics.name}}</h1>
+            <h2 class="label">{{basics.label}}</h2>
         </div>
         <span class="location">
           <span class="address"></span>
-          <span class="city">{{location['city']}}</span>
-          <span class="postalCode">{{location['postalCode']}}</span>
-          <span class="countryCode">{{location['countryCode']}}</span>
+          <span class="city">{{location.city}}</span>
+          <span class="postalCode">{{location.postal_code}}</span>
+          <span class="countryCode">{{location.country_code}}</span>
       </span>
         <div id="contact">
             {% for profile in profiles -%}
             <div class="website printHide">
-                <span class="{{ profile['icon'] }}">
-                    <a id="{{ profile['network'] }}" href="#" class="defaultLink">{{profile['network']}}</a>
-                    <a href="#" class="printLink">{{profile['handle']}}</a>
+                <span class="{{ profile.icon }}">
+                    <a href="{{ profile.url }}" target="_blank" rel="noopener noreferrer" class="defaultLink">{{profile.network}}</a>
+                    <a href="{{ profile.url }}" target="_blank" rel="noopener noreferrer" class="printLink">{{profile.handle}}</a>
                 </span>
             </div>
             {%- endfor %}
@@ -60,7 +53,7 @@
     <section class="section main-summary">
         <section>
             <div>
-                <p class="keep-new-lines"><strong>{{basics['summary']}}</strong>
+                <p class="keep-new-lines"><strong>{{basics.summary}}</strong>
             </div>
         </section>
     </section>
@@ -71,19 +64,20 @@
         <section id="skills">
             {% for skill in skills -%}
             <div class="item">
-                <h3 class="name">{{skill['name']}}</h3>
-                <div class="level {{skill['level'].lower()}}">
-                    <em>{{skill['level']}}</em>
+                <h3 class="name">{{skill.name}}</h3>
+                <div class="level {{skill.level.lower()}}">
+                    <em>{{skill.level}}</em>
                     <div class="bar"></div>
                 </div>
                 <ul class="keywords">
-                    {% for kw in skill['keywords'] -%}
+                    {% for kw in skill.keywords -%}
                     <li>{{kw}}</li>
                     {%- endfor %}
                 </ul>
             </div>
             {%- endfor %}
         </section>
+        {% if skills_ul is not none and skills_ul|length > 0 -%}
         <section id="skills_ul">
             <ul class="keywords">
                 {%- for skill in skills_ul %}
@@ -91,6 +85,7 @@
                 {%- endfor %}
             </ul>
         </section>
+        {%- endif %}
     </section>
     <section class="section">
         <header>
@@ -102,28 +97,26 @@
         <section id="work">
             {% for job in work -%}
             <section class="work-item">
-                <input id="work-item-{{loop.index - 1}}" type="checkbox" class="toggle-item" {{'checked' if loop.index
-                == 1 else ''}}>
-                <label for="work-item-{{loop.index - 1}}"></label>
+                <input id="work-item-{{loop.index - 1}}" type="checkbox" class="toggle-item" {{'checked' if job.display else ''}}>                <label for="work-item-{{loop.index - 1}}"></label>
                 <header>
-                    <div class="position">{{job['position']}}</div>
-                    <div class="company">{{job['name']}}</div>
+                    <div class="position">{{job.position}}</div>
+                    <div class="company">{{job.name}}</div>
                     <div class="date clearfix">
-                        <span class="startDate">{{job['startDate']}}</span>
-                        {% if job['endDate'] == "" -%}
+                        <span class="startDate">{{job.start_date | format_date}}</span>
+                        {% if job.end_date is none or job.end_date == "" -%}
                         {%- set endDate = " to Present" -%}
                         {%- else %}
-                        {%- set endDate = " to {}".format(job['endDate']) -%}
+                        {%- set endDate = " to {}".format(job.end_date | format_date) -%}
                         {%- endif %}
                         <span class="endDate">{{endDate}}</span>
                     </div>
                 </header>
                 <div class="item" id="work-item">
                     <div class="summary">
-                        {{job['summary'] if job['summary'] is not none else ''}}
+                        {{job.summary if job.summary is not none else ''}}
                     </div>
                     <ul class="highlights">
-                        {% for highlight in job['highlights'] -%}
+                        {% for highlight in job.highlights -%}
                         <li>
                             <p>{{highlight}}</p>
                         </li>
@@ -145,17 +138,17 @@
             {% for project in projects -%}
             <div class="item">
                 <div class="name">
-                    {% if project.get('url', "") != "" -%}
-                    <a id="{{project['name']}}" href="#">{{project['name']}}</a>
+                    {% if project.url and project.url != "" -%}
+                    <a href="{{project.url}}" target="_blank" rel="noopener noreferrer">{{project.name}}</a>
                     {%- else %}
-                    {{project['name']}}
+                    {{project.name}}
                     {%- endif %}
                 </div>
                 <div class="summary">
-                    {{project['summary']}}
+                    {{project.description}}
                 </div>
                 <ul class="highlights">
-                    {% for highlight in project['highlights'] -%}
+                    {% for highlight in project.highlights -%}
                     <li>
                         <p>{{highlight}}</p>
                     </li>
@@ -176,18 +169,18 @@
                 <header>
                     <div class="header-left">
                         <div class="studyType">
-                            {{edu['studyType']}} -
+                            {{edu.study_type}} -
                         </div>
                         <div class="area">
-                            {{edu['area']}}
+                            {{edu.area}}
                         </div>
                         <div class="institution">
-                            {{edu['institution']}}
+                            {{edu.institution}}
                         </div>
                     </div>
                     <div class="date">
-                        <span class="startDate">{{edu['startDate']}}</span>
-                        <span class="endDate"> - {{edu['endDate']}}</span>
+                        <span class="startDate">{{edu.start_date | format_date}}</span>
+                        <span class="endDate"> - {{edu.end_date | format_date}}</span>
                     </div>
                 </header>
                 <!-- empty item for spacing -->
@@ -204,10 +197,10 @@
             {% for interest in interests -%}
             <div class="item">
                 <h3 class="name">
-                    {{interest['name']}}
+                    {{interest.name}}
                 </h3>
                 <ul class="keywords">
-                    {% for kw in interest['keywords'] -%}
+                    {% for kw in interest.keywords -%}
                     <li>{{kw}}</li>
                     {%- endfor %}
                 </ul>
@@ -216,7 +209,4 @@
         </section>
     </section>
 </div>
-<script>
-    {{makeSetupJs(profiles, projects)}}
-</script>
 </html>

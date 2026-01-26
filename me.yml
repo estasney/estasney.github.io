@@ -43,35 +43,35 @@ work:
     description: Customer Lifecycle Operations
     position: Data Architect
     url: ''
-    startDate: Nov 2025
-    endDate: Present
+    startDate: '2025-11-01'
+    endDate: present
     summary: Customer Lifecycle Operations
-    highlights:
-      -
+    highlights: []
+    display: true
   - name: Cisco Systems
     location: Raleigh, NC (Remote)
     description: Customer Lifecycle Operations
     position: Data Scientist
     url: ''
-    startDate: Jan 2023
-    endDate: Nov 2025
+    startDate: '2023-01-01'
+    endDate: '2025-11-01'
     summary: Customer Lifecycle Operations - Data Canvas
     highlights:
       - Lead Developer for Data Canvas, an enterprise asset management platform for Customer Lifecycle Operations.
-      - Took ownership of production React application experiecing serious state management issues and data inconsistencies and delivered complete rewrite in one week. Led TypeScript migration, strengthing type safety and API contracts.
+      - Took ownership of production React application experiecing serious state management issues and data inconsistencies at release and delivered complete rewrite in one week. Led TypeScript migration, strengthing type safety and API contracts.
       - Built service-oriented FastAPI backend coordinating complex workflow dispatch and background processing; established contract-first development with OpenAPI specifications.
       - Implemented Pydantic and Zod schemas for robust data validation allowing parallel frontend and backend development. This allowed for faster, parallel development between frontend and backend teams and eliminated runtime data errors in production.
-      - Centralized authorization and authentication in both frontend and backend using SSO, JWT, and RBAC.
       - Engineered self-service spreadsheet upload supporting 40+ formats via declarative JSON configuration, automated column mapping, and web worker optimization.
       - Designed and implemented event-driven notification system allowing background tasks to display rich progress and output to users through typed payloads and dynamic UI components.
       - Consolidated common logic from 40 disparate repositories handling various backend tasks into single reusable Python package, reducing code duplication and maintenance overhead. Replaced per-repository Docker builds with centralized multi-stage Docker build process; reduced image size by 90% and build times by 75%.
+    display: true
   - name: Cisco Systems
     location: Raleigh, NC (Remote)
     description: Talent Hub
     position: Software Engineer
     url: ''
-    startDate: Aug 2016
-    endDate: Jan 2023
+    startDate: '2016-08-01'
+    endDate: '2023-01-01'
     summary: Talent Acquisition Operational Support
     highlights:
       - Developed Url Shortener Web Application with click-through performance metrics visualized with Dashboards for link owners.
@@ -90,81 +90,51 @@ work:
     description: Military Police
     position: E4 (Specialist)
     url: ''
-    startDate: Nov 2013
-    endDate: Nov 2016
+    startDate: '2013-11-01'
+    endDate: '2016-11-01'
     summary:
     highlights:
       - Military Police (31B)
       - 18 Months Active Duty Deployment
-  - name: Seven Step RPO
-    location: Denver, CO
-    description: Talent Acquisition - Suntrust Bank
-    position: Recruiter
-    startDate: July 2013
-    endDate: Sept 2014
-    summary:
-    highlights:
-      - Qualify candidates by conducting phone interviews to ensure technical
-        and cultural match to client needs
-  - name: American Campus Communities
-    location: Eastern U.S.
-    description: Student Housing
-    position: Assistant General Manager
-    startDate: May 2011
-    endDate: May 2013
-    summary:
-    highlights:
-      - Travelled between company properties to supervise and audit property operations
 education:
   - institution: The University of Tennessee
     area: Biochemistry, Cellular and Molecular Biology
     studyType: Bachelors
-    startDate: '2006'
-    endDate: '2011'
+    startDate: '2006-08-01'
+    endDate: '2011-05-01'
 skills:
-  - name: Python
+  - name: API Development
     level: Master
     keywords:
-      - Pandas
-      - NumPy
-      - Flask
       - Pydantic
-      - spaCy
-      - SQLAlchemy
-      - Pytest
-      - Prefect
-  - name: Data Science
+      - FastAPI
+      - OpenAPI/Swagger
+      - WSGI/ASGI
+      - pytest
+      - Pandas/Polars/NumPy
+  - name: Web Development
     level: Advanced
     keywords:
-      - NLP
-      - Transformers
-      - Decompositions
-      - Statistics
-      - Business Intelligence
-  - name: Application Development
+      - React
+      - Typescript
+      - HTML
+      - CSS
+      - Vite
+      - Tanstack
+      - Hooks
+  - name: Containerization & DevOps
     level: Advanced
     keywords:
       - AWS
+      - Docker Builds
+      - Kubernetes
+      - CI/CD
+      - GitHub Actions
+      - Bash Scripting
       - Linux
-      - Docker
-      - Nginx
-      - React
-      - Typescript
-      - Webpack
-      - Electron
+
 skills_ul:
-  - Docker
-  - MySQL
-  - Postgres
-  - Jupyter Notebooks
-  - Git
-  - Schema Design
-  - API Design
-  - HTTP
-  - Bash
-  - make
-  - SCSS
-  - D3
+
 
 technologies:
   - Python
@@ -229,8 +199,8 @@ projects:
       - Android
       - GLSL
       - Java
-    startDate: May 2022
-    endDate: ''
+    startDate: '2022-05-01'
+    endDate:
     url: https://github.com/estasney/MindRef
     type: Application
   - name: hNMF
@@ -247,8 +217,8 @@ projects:
       - Scikit-learn
       - Matrix Decomposition
       - Sphinx
-    startDate: Dec 2019
-    endDate: ''
+    startDate: '2019-12-01'
+    endDate:
     url: https://github.com/estasney/hNMF
     roles:
       - Package Developer and Maintainer
@@ -289,3 +259,8 @@ projects:
       - Compatible with SPA sites
       - Parses raw strings into structured data. Transforms data into spreadsheet form
         compatible with internal ATS.
+    keywords:
+      - Electron
+      - Flask
+      - Web Scraping
+      - Chromium

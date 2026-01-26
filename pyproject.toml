@@ -1,0 +1,53 @@
+[project]
+name = "mypage"
+version = "0.1.0"
+description = "mypage"
+requires-python = ">=3.14"
+
+authors = [
+  { name = "estasney", email = "" }
+]
+
+readme = "README.md"
+dependencies = [
+    "click>=8.3.1",
+    "jinja2>=3.1.6",
+    "pydantic>=2.12.5",
+    "pydantic-settings>=2.12.0",
+    "pyyaml>=6.0.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+target-version = "py314"
+
+[tool.ruff.lint.per-file-ignores]
+"src/canvas_flows/*.py" = [ "TC002",]
+"tests/**.py" = [ "ANN",]
+
+[tool.ruff.lint]
+select = [ "A", "ANN", "ASYNC", "B", "C4", "EM", "ERA", "ERA", "F", "FA", "FIX", "G", "I", "ICN", "LOG", "NPY", "PD", "PERF", "PGH", "PIE", "PL", "RUF", "SIM", "SLOT", "T10", "TC", "TCH", "TD", "TRY",]
+ignore = [ "F401", "F403", "PLR0913", "FA100", "FA102", "PLR", "PLC0415", "RUF012", "PD901", "ANN401",]
+
+[tool.ruff.lint.flake8-type-checking]
+quote-annotations = true
+exempt-modules = [ "typing", "typing_extensions", ]
+runtime-evaluated-base-classes = [ ]
+
+
+[tool.basedpyright]
+include = ["src/"]
+pythonVersion = "3.12"
+pythonPlatform = "All"
+strictGenericNarrowing = true
+reportUnannotatedClassAttribute = "none"
+reportInvalidCast = "none"
+reportUnusedCallResult = "none"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]

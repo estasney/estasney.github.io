@@ -1,0 +1,759 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://estasney.github.io/me.schema.json",
+  "$defs": {
+    "Basics": {
+      "description": "Basic personal and contact information.",
+      "properties": {
+        "name": {
+          "examples": [
+            "Eric Stasney"
+          ],
+          "title": "Name",
+          "type": "string"
+        },
+        "label": {
+          "description": "Professional title or role",
+          "examples": [
+            "Full Stack Data Engineer",
+            "Data Scientist"
+          ],
+          "title": "Label",
+          "type": "string"
+        },
+        "image": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Image"
+        },
+        "email": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Email"
+        },
+        "phone": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Phone"
+        },
+        "url": {
+          "description": "Primary professional URL",
+          "examples": [
+            "https://www.linkedin.com/in/eric-stasney"
+          ],
+          "title": "Url",
+          "type": "string"
+        },
+        "summary": {
+          "description": "Professional summary or bio",
+          "title": "Summary",
+          "type": "string"
+        },
+        "location": {
+          "$ref": "#/$defs/Location"
+        },
+        "profiles": {
+          "items": {
+            "$ref": "#/$defs/Profile"
+          },
+          "title": "Profiles",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "label",
+        "url",
+        "summary",
+        "location",
+        "profiles"
+      ],
+      "title": "Basics",
+      "type": "object"
+    },
+    "Education": {
+      "description": "Educational background entry.",
+      "properties": {
+        "institution": {
+          "description": "Name of educational institution",
+          "examples": [
+            "The University of Tennessee",
+            "MIT"
+          ],
+          "title": "Institution",
+          "type": "string"
+        },
+        "area": {
+          "description": "Field of study or major",
+          "examples": [
+            "Biochemistry, Cellular and Molecular Biology",
+            "Computer Science"
+          ],
+          "title": "Area",
+          "type": "string"
+        },
+        "studyType": {
+          "$ref": "#/$defs/StudyType",
+          "description": "Degree type"
+        },
+        "startDate": {
+          "examples": [
+            "2006",
+            "2006-08-15"
+          ],
+          "format": "date",
+          "title": "Startdate",
+          "type": "string"
+        },
+        "endDate": {
+          "examples": [
+            "2011",
+            "2011-05-20"
+          ],
+          "format": "date",
+          "title": "Enddate",
+          "type": "string"
+        }
+      },
+      "required": [
+        "institution",
+        "area",
+        "studyType",
+        "startDate",
+        "endDate"
+      ],
+      "title": "Education",
+      "type": "object"
+    },
+    "Interest": {
+      "description": "Personal or professional interest area.",
+      "properties": {
+        "name": {
+          "description": "Interest category",
+          "examples": [
+            "IoT & Robotics",
+            "Electrical Engineering"
+          ],
+          "title": "Name",
+          "type": "string"
+        },
+        "keywords": {
+          "description": "Specific topics or technologies of interest",
+          "examples": [
+            [
+              "Arduino",
+              "ESP32",
+              "C++"
+            ]
+          ],
+          "items": {
+            "type": "string"
+          },
+          "title": "Keywords",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "keywords"
+      ],
+      "title": "Interest",
+      "type": "object"
+    },
+    "Location": {
+      "description": "Geographic location information.",
+      "properties": {
+        "address": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Address"
+        },
+        "postalCode": {
+          "examples": [
+            "27529",
+            "NC 27529"
+          ],
+          "title": "Postalcode",
+          "type": "string"
+        },
+        "city": {
+          "examples": [
+            "Garner",
+            "Raleigh"
+          ],
+          "title": "City",
+          "type": "string"
+        },
+        "countryCode": {
+          "description": "ISO country code",
+          "examples": [
+            "US"
+          ],
+          "title": "Countrycode",
+          "type": "string"
+        },
+        "region": {
+          "description": "State or region name",
+          "examples": [
+            "North Carolina",
+            "California"
+          ],
+          "title": "Region",
+          "type": "string"
+        }
+      },
+      "required": [
+        "postalCode",
+        "city",
+        "countryCode",
+        "region"
+      ],
+      "title": "Location",
+      "type": "object"
+    },
+    "Profile": {
+      "description": "Social media or professional network profile.",
+      "properties": {
+        "network": {
+          "description": "Name of the social network or platform",
+          "examples": [
+            "GitHub",
+            "LinkedIn",
+            "Kaggle"
+          ],
+          "title": "Network",
+          "type": "string"
+        },
+        "username": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Username"
+        },
+        "url": {
+          "description": "Full URL to the profile",
+          "examples": [
+            "https://github.com/estasney"
+          ],
+          "title": "Url",
+          "type": "string"
+        },
+        "handle": {
+          "description": "Display handle or identifier",
+          "examples": [
+            "estasney",
+            "eric-stasney"
+          ],
+          "title": "Handle",
+          "type": "string"
+        },
+        "icon": {
+          "description": "CSS class for icon display",
+          "examples": [
+            "fab fa-github",
+            "fab fa-linkedin"
+          ],
+          "title": "Icon",
+          "type": "string"
+        }
+      },
+      "required": [
+        "network",
+        "url",
+        "handle",
+        "icon"
+      ],
+      "title": "Profile",
+      "type": "object"
+    },
+    "Project": {
+      "description": "Personal or professional project entry.",
+      "properties": {
+        "name": {
+          "description": "Project name",
+          "examples": [
+            "MindRef",
+            "hNMF",
+            "DupCheck"
+          ],
+          "title": "Name",
+          "type": "string"
+        },
+        "description": {
+          "description": "Brief project description",
+          "examples": [
+            "Cross-platform note taking application",
+            "Hierarchical Non-Negative Matrix Factorization"
+          ],
+          "title": "Description",
+          "type": "string"
+        },
+        "highlights": {
+          "description": "Key features, achievements, or technical details",
+          "items": {
+            "type": "string"
+          },
+          "title": "Highlights",
+          "type": "array"
+        },
+        "keywords": {
+          "description": "Technologies, tools, or skills used",
+          "examples": [
+            [
+              "Kivy",
+              "GUI",
+              "Android"
+            ],
+            [
+              "NumPy",
+              "Scipy",
+              "Scikit-learn"
+            ]
+          ],
+          "items": {
+            "type": "string"
+          },
+          "title": "Keywords",
+          "type": "array"
+        },
+        "startDate": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "const": "present",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "examples": [
+            "May 2022",
+            "2022-05-15"
+          ],
+          "title": "Startdate"
+        },
+        "endDate": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "const": "present",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "End date, 'present' for ongoing, or empty for completed",
+          "examples": [
+            "",
+            "present",
+            "Dec 2023"
+          ],
+          "title": "Enddate"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Project URL or repository link",
+          "examples": [
+            "https://github.com/estasney/MindRef"
+          ],
+          "title": "Url"
+        },
+        "type": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProjectType"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Project category"
+        },
+        "roles": {
+          "anyOf": [
+            {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Roles or responsibilities in the project",
+          "examples": [
+            [
+              "Package Developer and Maintainer"
+            ]
+          ],
+          "title": "Roles"
+        },
+        "entity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Organization or entity associated with the project",
+          "title": "Entity"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "highlights",
+        "keywords"
+      ],
+      "title": "Project",
+      "type": "object"
+    },
+    "ProjectType": {
+      "enum": [
+        "Application",
+        "Python Package"
+      ],
+      "title": "ProjectType",
+      "type": "string"
+    },
+    "Skill": {
+      "description": "Technical or professional skill with proficiency level.",
+      "properties": {
+        "name": {
+          "description": "Skill category or area",
+          "examples": [
+            "API Development",
+            "Web Development",
+            "Containerization & DevOps"
+          ],
+          "title": "Name",
+          "type": "string"
+        },
+        "level": {
+          "$ref": "#/$defs/SkillLevel",
+          "description": "Proficiency level"
+        },
+        "keywords": {
+          "description": "Specific technologies or tools within this skill",
+          "examples": [
+            [
+              "Pydantic",
+              "FastAPI",
+              "OpenAPI/Swagger"
+            ]
+          ],
+          "items": {
+            "type": "string"
+          },
+          "title": "Keywords",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "level",
+        "keywords"
+      ],
+      "title": "Skill",
+      "type": "object"
+    },
+    "SkillLevel": {
+      "enum": [
+        "Advanced",
+        "Master"
+      ],
+      "title": "SkillLevel",
+      "type": "string"
+    },
+    "StudyType": {
+      "enum": [
+        "Bachelors"
+      ],
+      "title": "StudyType",
+      "type": "string"
+    },
+    "Work": {
+      "description": "Work experience entry.",
+      "properties": {
+        "name": {
+          "description": "Company or organization name",
+          "examples": [
+            "Cisco Systems",
+            "US Army / COARNG"
+          ],
+          "title": "Name",
+          "type": "string"
+        },
+        "location": {
+          "description": "Work location (city, state, remote status)",
+          "examples": [
+            "Raleigh, NC (Remote)",
+            "Denver, CO"
+          ],
+          "title": "Location",
+          "type": "string"
+        },
+        "description": {
+          "description": "Department or division",
+          "examples": [
+            "Customer Lifecycle Operations",
+            "Talent Hub"
+          ],
+          "title": "Description",
+          "type": "string"
+        },
+        "position": {
+          "description": "Job title",
+          "examples": [
+            "Data Architect",
+            "Data Scientist",
+            "Software Engineer"
+          ],
+          "title": "Position",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "startDate": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "const": "present",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "examples": [
+            "Nov 2025",
+            "2023-01-15"
+          ],
+          "title": "Startdate"
+        },
+        "endDate": {
+          "anyOf": [
+            {
+              "format": "date",
+              "type": "string"
+            },
+            {
+              "const": "present",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "End date or 'present' for current position",
+          "examples": [
+            "Present",
+            "Nov 2025",
+            "2025-11-30"
+          ],
+          "title": "Enddate"
+        },
+        "summary": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Brief role summary",
+          "title": "Summary"
+        },
+        "highlights": {
+          "description": "Key achievements and responsibilities",
+          "items": {
+            "type": "string"
+          },
+          "title": "Highlights",
+          "type": "array"
+        },
+        "display": {
+          "default": false,
+          "description": "Whether to display this work item expanded by default",
+          "title": "Display",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "location",
+        "description",
+        "position",
+        "startDate",
+        "highlights"
+      ],
+      "title": "Work",
+      "type": "object"
+    }
+  },
+  "description": "Complete resume document structure matching me.yml format.",
+  "properties": {
+    "basics": {
+      "$ref": "#/$defs/Basics",
+      "description": "Personal and contact information"
+    },
+    "work": {
+      "description": "Work experience history",
+      "items": {
+        "$ref": "#/$defs/Work"
+      },
+      "title": "Work",
+      "type": "array"
+    },
+    "education": {
+      "description": "Educational background",
+      "items": {
+        "$ref": "#/$defs/Education"
+      },
+      "title": "Education",
+      "type": "array"
+    },
+    "skills": {
+      "description": "Technical and professional skills with proficiency levels",
+      "items": {
+        "$ref": "#/$defs/Skill"
+      },
+      "title": "Skills",
+      "type": "array"
+    },
+    "skills_ul": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Unstructured list of additional skills",
+      "title": "Skills Ul"
+    },
+    "technologies": {
+      "description": "Flat list of technologies and tools",
+      "items": {
+        "type": "string"
+      },
+      "title": "Technologies",
+      "type": "array"
+    },
+    "highlights": {
+      "description": "Key professional highlights and competencies",
+      "items": {
+        "type": "string"
+      },
+      "title": "Highlights",
+      "type": "array"
+    },
+    "interests": {
+      "description": "Personal and professional interests",
+      "items": {
+        "$ref": "#/$defs/Interest"
+      },
+      "title": "Interests",
+      "type": "array"
+    },
+    "projects": {
+      "description": "Notable projects and contributions",
+      "items": {
+        "$ref": "#/$defs/Project"
+      },
+      "title": "Projects",
+      "type": "array"
+    }
+  },
+  "required": [
+    "basics",
+    "work",
+    "education",
+    "skills",
+    "technologies",
+    "highlights",
+    "interests",
+    "projects"
+  ],
+  "title": "Resume",
+  "type": "object"
+}
